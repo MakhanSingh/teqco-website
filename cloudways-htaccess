@@ -1,5 +1,6 @@
 # Teqco static site: clean URLs (/about -> about.html), caching, compression
 Options -Indexes
+DirectoryIndex index.html index.php
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
