@@ -13,9 +13,9 @@
     --paper:#ffffff;
     --cta:#d8601f;          /* steel-orange, primary CTA only */
     --cta-2:#bf5219;
-    --cond:"Fira Sans","Segoe UI",Helvetica,Arial,sans-serif;   /* heading face, matched to the logo letterforms */
-    --display:"Fira Sans","Segoe UI",Helvetica,Arial,sans-serif;
-    --body:"Fira Sans","Segoe UI",Helvetica,Arial,sans-serif;
+    --cond:var(--font-fira),"Fira Sans","Segoe UI",Helvetica,Arial,sans-serif;   /* heading face, matched to the logo letterforms */
+    --display:var(--font-fira),"Fira Sans","Segoe UI",Helvetica,Arial,sans-serif;
+    --body:var(--font-fira),"Fira Sans","Segoe UI",Helvetica,Arial,sans-serif;
     --gutter-l:max(16px, env(safe-area-inset-left, 0px));
     --gutter-r:max(16px, env(safe-area-inset-right, 0px));
     --wrap:1240px;

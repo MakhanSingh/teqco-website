@@ -1,11 +1,12 @@
-# Vercel link + secrets
-deploy/.vercel/
-deploy/.env*
+# Vercel
 .vercel/
 .env*
-# Build outputs and packages (deploy/ is rebuilt by build.py)
-deploy/
+# Next.js
+.next/
+out/
+node_modules/
+next-env.d.ts
+# packages
 cloudways/
 teqco-site.zip
-# OS / editor
 .DS_Store
