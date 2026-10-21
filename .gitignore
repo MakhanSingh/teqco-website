@@ -1,0 +1,11 @@
+# Vercel link + secrets
+deploy/.vercel/
+deploy/.env*
+.vercel/
+.env*
+# Build outputs and packages (deploy/ is rebuilt by build.py)
+deploy/
+cloudways/
+teqco-site.zip
+# OS / editor
+.DS_Store
