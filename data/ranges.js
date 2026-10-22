@@ -52,8 +52,7 @@ export const store = {
   corner: 'Corner of Bathurst and Denison Streets',
   mapsUrl: 'https://www.google.com/maps/search/22+Bathurst+Street+Condobolin+NSW+2877',
   hours: 'Monday to Friday, 7:00am to 5:00pm',
-  // Social profile URLs still to be supplied by the client.
-  facebook: '#',
-  linkedin: '#',
+  facebook: 'https://www.facebook.com/teqco/',
+  linkedin: 'https://www.linkedin.com/company/teqco/',
   agency: { name: 'Think Creative Agency', url: 'https://thinkcreativeagency.com.au' },
 };
