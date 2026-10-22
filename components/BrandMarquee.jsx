@@ -1,3 +1,4 @@
+import Pic from "./Pic";
 export default function BrandMarquee({ noTop = false }) {
   return (
     <>
@@ -6,7 +7,7 @@ export default function BrandMarquee({ noTop = false }) {
   <div className="wrap">
     <span className="eyebrow">Brands we stock</span>
     <div className="marquee">
-      <ul className="track"><li><img src="/img/brand-alpha.png" alt="Alpha Tools" /></li><li><img src="/img/brand-hikoki.jpg" alt="HiKoki" /></li><li><img src="/img/brand-kctools.svg" alt="KC Tools" /></li><li><img src="/img/brand-grainline.png" alt="Grainline" /></li><li><img src="/img/brand-peerless.png" alt="Peerless" /></li><li><img src="/img/brand-macnaught.png" alt="Macnaught" /></li><li><img src="/img/brand-maxisafe.png" alt="Maxisafe" /></li><li><img src="/img/brand-alpha.png" alt="Alpha Tools" /></li><li><img src="/img/brand-hikoki.jpg" alt="HiKoki" /></li><li><img src="/img/brand-kctools.svg" alt="KC Tools" /></li><li><img src="/img/brand-grainline.png" alt="Grainline" /></li><li><img src="/img/brand-peerless.png" alt="Peerless" /></li><li><img src="/img/brand-macnaught.png" alt="Macnaught" /></li><li><img src="/img/brand-maxisafe.png" alt="Maxisafe" /></li></ul>
+      <ul className="track"><li><Pic src="brand-alpha.png" alt="Alpha Tools" sizes="160px" /></li><li><Pic src="brand-hikoki.jpg" alt="HiKoki" sizes="160px" /></li><li><img src="/img/brand-kctools.svg" alt="KC Tools" width="420" height="120" loading="lazy" /></li><li><Pic src="brand-grainline.png" alt="Grainline" sizes="160px" /></li><li><Pic src="brand-peerless.png" alt="Peerless" sizes="160px" /></li><li><Pic src="brand-macnaught.png" alt="Macnaught" sizes="160px" /></li><li><Pic src="brand-maxisafe.png" alt="Maxisafe" sizes="160px" /></li><li><Pic src="brand-alpha.png" alt="Alpha Tools" sizes="160px" /></li><li><Pic src="brand-hikoki.jpg" alt="HiKoki" sizes="160px" /></li><li><img src="/img/brand-kctools.svg" alt="KC Tools" width="420" height="120" loading="lazy" /></li><li><Pic src="brand-grainline.png" alt="Grainline" sizes="160px" /></li><li><Pic src="brand-peerless.png" alt="Peerless" sizes="160px" /></li><li><Pic src="brand-macnaught.png" alt="Macnaught" sizes="160px" /></li><li><Pic src="brand-maxisafe.png" alt="Maxisafe" sizes="160px" /></li></ul>
     </div>
   </div>
 </section>

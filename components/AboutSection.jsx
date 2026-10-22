@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Pic from './Pic';
 
 const CheckIcon = () => <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" /></svg>;
 
@@ -7,7 +8,7 @@ export default function AboutSection() {
     <section className="sec about" id="about">
       <div className="wrap">
         <figure>
-          <img src="/img/about-tools.jpg" alt="Racks of hand tools in the Teqco workshop" />
+          <Pic src="about-tools.jpg" alt="Racks of hand tools in the Teqco workshop" sizes="(max-width:980px) 100vw, 560px" />
           <span className="chip">22 Bathurst St, Condobolin</span>
         </figure>
         <div>

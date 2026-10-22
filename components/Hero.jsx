@@ -1,17 +1,22 @@
 "use client";
 import { useEffect, useRef, useState } from 'react';
+import { preload } from 'react-dom';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from './Icons';
+import Pic from './Pic';
 
 const slides = [
-  { img: '/img/hero-welding.jpg', h: 'Your local rural, trade and hardware supplier', p: 'Teqco stocks a comprehensive range of steel sections, sheet and mesh, hand and power tools, fasteners and hardware, right here in Condobolin. Fast, friendly service from people who know the land.' },
-  { img: '/img/steel.jpg', h: 'Steel for the jobs that matter', p: 'From RHS and SHS to sheet, mesh and roofing, we supply a wide range of steel products, with cutting to length and sheet metal folding up to 3mm.' },
-  { img: '/img/tools.jpg', h: 'Good gear for work and around the property.', p: "From HiKoki, Alpha Tools, KC Tools and Bossweld to fasteners, welding supplies, gas and farm essentials, Teqco has a wide range for rural, trade and home projects. Tell us what you're working on and we'll help you find what you need." },
+  { img: 'hero-welding.jpg', h: 'Your local rural, trade and hardware supplier', p: 'Teqco stocks a comprehensive range of steel sections, sheet and mesh, hand and power tools, fasteners and hardware, right here in Condobolin. Fast, friendly service from people who know the land.' },
+  { img: 'steel.jpg', h: 'Steel for the jobs that matter', p: 'From RHS and SHS to sheet, mesh and roofing, we supply a wide range of steel products, with cutting to length and sheet metal folding up to 3mm.' },
+  { img: 'tools.jpg', h: 'Good gear for work and around the property.', p: "From HiKoki, Alpha Tools, KC Tools and Bossweld to fasteners, welding supplies, gas and farm essentials, Teqco has a wide range for rural, trade and home projects. Tell us what you're working on and we'll help you find what you need." },
 ];
 const DUR = 6000;
 
 export default function Hero() {
+  // Preload the LCP image; the other slides mount once the page is idle.
+  preload('/img/w/hero-welding-800.webp', { as: 'image', fetchPriority: 'high', imageSrcSet: '/img/w/hero-welding-480.webp 480w, /img/w/hero-welding-800.webp 800w, /img/w/hero-welding-1200.webp 1200w', imageSizes: '100vw' });
   const [i, setI] = useState(0);
+  const [rest, setRest] = useState(false);
   const [out, setOut] = useState(false);
   const [paused, setPaused] = useState(false);
   const [reduce, setReduce] = useState(false);
@@ -21,9 +26,10 @@ export default function Hero() {
 
   useEffect(() => {
     setReduce(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    const t = setTimeout(() => setRest(true), 2500);
     const onVis = () => setPaused(document.hidden);
     document.addEventListener('visibilitychange', onVis);
-    return () => document.removeEventListener('visibilitychange', onVis);
+    return () => { clearTimeout(t); document.removeEventListener('visibilitychange', onVis); };
   }, []);
 
   // Text slides up on every change except the first paint.
@@ -48,7 +54,7 @@ export default function Hero() {
   return (
     <section className="hero" id="hero" aria-label="Featured" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(document.hidden)}>
       {slides.map((sl, k) => (
-        <div key={sl.img} className={`slide${k === i ? ' on' : ''}`} style={{ backgroundImage: `url(${sl.img})` }} />
+        <div key={sl.img} className={`slide${k === i ? ' on' : ''}`} aria-hidden={k !== i}>{(k === 0 || rest || k === i) && <Pic src={sl.img} alt="" sizes="100vw" priority={k === 0} />}</div>
       ))}
       <div className="wrap">
         <div id="heroText">

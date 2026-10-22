@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { rangesAZ, store } from '@/data/ranges';
 import { CompressorIcon } from './Icons';
+import Pic from './Pic';
 
 export function JumpList() {
   return (
@@ -23,7 +24,7 @@ export function RangesList() {
           <article className="range" id={r.slug} key={r.slug}>
             <figure>
               {r.img
-                ? <img src={`/img/${r.img}`} alt="" />
+                ? <Pic src={r.img} alt="" sizes="(max-width:980px) 100vw, 500px" />
                 : <div className="noimg"><CompressorIcon /></div>}
             </figure>
             <div className="body">

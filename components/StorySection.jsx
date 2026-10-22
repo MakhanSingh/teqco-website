@@ -1,3 +1,5 @@
+import Pic from './Pic';
+
 export default function StorySection() {
   return (
     <section className="sec story" id="story">
@@ -13,7 +15,7 @@ export default function StorySection() {
           </div>
         </div>
         <figure>
-          <img src="/img/tools.jpg" alt="Hand tools on the Teqco store wall" />
+          <Pic src="tools.jpg" alt="Hand tools on the Teqco store wall" sizes="(max-width:980px) 100vw, 560px" />
           <span className="chip">22 Bathurst St, Condobolin</span>
         </figure>
       </div>

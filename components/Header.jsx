@@ -43,7 +43,7 @@ export default function Header() {
 
       <header className="nav">
         <div className="wrap">
-          <Link className="logo" href="/" aria-label="Teqco home"><img src="/img/logo.jpg" alt="Teqco" /></Link>
+          <Link className="logo" href="/" aria-label="Teqco home"><img src="/img/logo.jpg" alt="Teqco" width="1600" height="533" /></Link>
           <nav aria-label="Main">
             <ul className="menu">
               {nav.map((item) => (

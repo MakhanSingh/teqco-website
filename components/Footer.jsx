@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="fgrid">
           <div>
-            <Link className="logo" href="/"><img src="/img/logo.jpg" alt="Teqco" /></Link>
+            <Link className="logo" href="/"><img src="/img/logo.jpg" alt="Teqco" width="1600" height="533" loading="lazy" /></Link>
             <p className="blurb">Comprehensive retail outlet for the rural, trade and handyman market. Steel, tools, fasteners and hardware in Condobolin.</p>
             <div className="social">
               <a href={store.facebook} aria-label="Facebook" target="_blank" rel="noopener"><FacebookIcon /></a>

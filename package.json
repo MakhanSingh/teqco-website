@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/images.mjs",
     "build": "next build",
     "start": "next start"
   },
@@ -11,5 +12,8 @@
     "next": "16.4.2",
     "react": "19.3.0",
     "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
   }
 }

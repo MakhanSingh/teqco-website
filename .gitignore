@@ -11,3 +11,5 @@ cloudways/
 teqco-site.zip
 .DS_Store
 .vercel
+public/img/w/
+data/images.json
