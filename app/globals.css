@@ -11,8 +11,8 @@
     --line:#dadfda;
     --surface:#f3f4f1;
     --paper:#ffffff;
-    --cta:#d8601f;          /* steel-orange, primary CTA only */
-    --cta-2:#bf5219;
+    --cta:#bf5219;          /* steel-orange, primary CTA only (4.7:1 with white text) */
+    --cta-2:#a8450f;
     --cond:var(--font-fira),"Fira Sans","Segoe UI",Helvetica,Arial,sans-serif;   /* heading face, matched to the logo letterforms */
     --display:var(--font-fira),"Fira Sans","Segoe UI",Helvetica,Arial,sans-serif;
     --body:var(--font-fira),"Fira Sans","Segoe UI",Helvetica,Arial,sans-serif;
@@ -125,9 +125,9 @@
   .pcard.flat .ic svg{width:48px;height:48px;fill:none;stroke:#fff;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
   .pcard.quote{background:var(--cta);justify-content:space-between}
   .pcard.quote::before{display:none}
-  .pcard.quote .eyebrow{color:rgba(255,255,255,.8);display:block;margin-bottom:8px}
+  .pcard.quote .eyebrow{color:#fff;display:block;margin-bottom:8px}
   .pcard.quote .t{font-size:25px}
-  .pcard.quote .s{color:rgba(255,255,255,.92);margin-top:10px;font-size:15px}
+  .pcard.quote .s{color:#fff;margin-top:10px;font-size:15px}
   .pcard.quote .btn{align-self:flex-start;color:var(--cta-2)}
   .pcard.quote:hover{background:var(--cta-2)}
 
@@ -233,7 +233,7 @@
   .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
   .fgrid .logo img{height:42px}
   .fgrid .blurb{margin-top:18px;max-width:34ch;color:var(--muted);font-size:16px}
-  .fgrid h4{font-family:var(--display);font-size:14px;font-weight:700;color:var(--ink);margin-bottom:14px;text-transform:uppercase;letter-spacing:.1em}
+  .fgrid h2{font-family:var(--display);font-size:14px;font-weight:700;color:var(--ink);margin-bottom:14px;text-transform:uppercase;letter-spacing:.1em}
   .fgrid ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:16px;color:var(--muted)}
   .fgrid li a:hover{color:var(--green);text-decoration:underline}
   .social{display:flex;gap:8px;margin-top:18px}

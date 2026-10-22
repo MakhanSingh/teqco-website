@@ -16,7 +16,7 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h4>Quick links</h4>
+            <h2>Quick links</h2>
             <ul>
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about/">About</Link></li>
@@ -25,13 +25,13 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4>Ranges</h4>
+            <h2>Ranges</h2>
             <ul>
               {rangesAZ.map((r) => <li key={r.slug}><Link href={`/products/#${r.slug}`}>{r.title}</Link></li>)}
             </ul>
           </div>
           <div>
-            <h4>Visit</h4>
+            <h2>Visit</h2>
             <ul>
               <li><a href={store.mapsUrl} target="_blank" rel="noopener">22 Bathurst Street<br />Condobolin NSW 2877</a></li>
               <li><a href={store.tel}>{store.phone}</a></li>
