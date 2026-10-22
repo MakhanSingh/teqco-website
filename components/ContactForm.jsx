@@ -1,17 +1,52 @@
 "use client";
 import { useState } from 'react';
-import { rangesAZ as ranges } from '@/data/ranges';
+import { rangesAZ as ranges, store } from '@/data/ranges';
+import { WEB3FORMS_KEY, WEB3FORMS_URL } from '@/data/forms';
 
-// Mock submit for now: the live site will post this to the store's email.
+const TYPE_LABEL = { general: 'General enquiry', quote: 'Quote request' };
+
 export default function ContactForm() {
-  const [sent, setSent] = useState(false);
-  const onSubmit = (e) => {
+  const [status, setStatus] = useState('idle'); // idle | sending | ok | error
+
+  const onSubmit = async (e) => {
     e.preventDefault();
     const f = e.currentTarget;
     if (!f.checkValidity()) { f.reportValidity(); return; }
-    setSent(true);
-    f.reset();
+    const d = new FormData(f);
+    // Honeypot: real visitors never see or tick this box.
+    if (d.get('botcheck')) { setStatus('ok'); f.reset(); return; }
+
+    const type = TYPE_LABEL[d.get('type')] || 'Enquiry';
+    const area = d.get('area');
+    const name = `${d.get('fname')} ${d.get('lname')}`.trim();
+    const payload = {
+      access_key: WEB3FORMS_KEY,
+      subject: `${type} – ${area} (teqco.com.au)`,
+      from_name: 'Teqco website',
+      name,
+      email: d.get('email'),
+      phone: d.get('phone') || 'Not provided',
+      enquiry_type: type,
+      area_of_enquiry: area,
+      message: d.get('msg'),
+    };
+
+    setStatus('sending');
+    try {
+      const res = await fetch(WEB3FORMS_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && json.success) { setStatus('ok'); f.reset(); }
+      else setStatus('error');
+    } catch {
+      setStatus('error');
+    }
   };
+
+  const sending = status === 'sending';
   return (
     <form className="form" id="enquiry" noValidate onSubmit={onSubmit}>
       <h3>Send an enquiry</h3>
@@ -42,8 +77,16 @@ export default function ContactForm() {
         <label htmlFor="msg">Your message *</label>
         <textarea id="msg" name="msg" required placeholder="Tell us what you need, sizes and quantities if you know them."></textarea>
       </div>
-      <button className="btn btn-cta" type="submit">Send enquiry</button>
-      <p className={`ok${sent ? ' show' : ''}`} id="ok">Thanks, your enquiry has been noted. On the live site this will email the store.</p>
+      <input type="checkbox" name="botcheck" className="hp" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+      <button className="btn btn-cta" type="submit" disabled={sending} aria-busy={sending}>
+        {sending ? 'Sending…' : 'Send enquiry'}
+      </button>
+      <p className={`ok${status === 'ok' ? ' show' : ''}`} role="status" aria-live="polite">
+        Thanks, your enquiry has been sent. We’ll be in touch soon.
+      </p>
+      <p className={`err${status === 'error' ? ' show' : ''}`} role="alert">
+        Sorry, something went wrong sending your enquiry. Please call us on <a href={store.tel}>{store.phone}</a> or email <a href={`mailto:${store.email}`}>{store.email}</a>.
+      </p>
     </form>
   );
 }
