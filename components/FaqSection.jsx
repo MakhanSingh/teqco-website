@@ -2,7 +2,7 @@ export default function FaqSection({ tight = false }) {
   return (
     <>
 {/* FAQ */}
-<section className="sec faq" id="faq" style={tight ? {paddingTop:0} : undefined}>
+<section className="sec faq" id="faq">
   <div className="wrap">
     <div className="sec-row">
       <div>

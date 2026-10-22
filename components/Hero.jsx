@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from './Icons';
 
 const slides = [
-  { img: '/img/hero-welding.jpg', h: 'Steel, tools and hardware for the rural, trade and handyman market', p: 'Teqco stocks a comprehensive range of steel sections, sheet and mesh, hand and power tools, fasteners and hardware, right here in Condobolin. Fast, friendly service from people who know the land.' },
-  { img: '/img/steel.jpg', h: 'A vast selection of steel section, sheet and mesh', p: 'RHS, SHS, pipe, angle, flat bar and sheet in the sizes you need, plus in-store cutting and folding up to 3mm.' },
-  { img: '/img/tools.jpg', h: 'The brands tradies trust, under one roof', p: 'HiKoki, Alpha Tools, KC Tools, Bossweld, Macnaught and more, with fasteners and hardware to match.' },
+  { img: '/img/hero-welding.jpg', h: 'Your local rural, trade and hardware supplier', p: 'Teqco stocks a comprehensive range of steel sections, sheet and mesh, hand and power tools, fasteners and hardware, right here in Condobolin. Fast, friendly service from people who know the land.' },
+  { img: '/img/steel.jpg', h: 'Steel for the jobs that matter', p: 'From RHS and SHS to sheet, mesh and roofing, we supply a wide range of steel products, with cutting to length and sheet metal folding up to 3mm.' },
+  { img: '/img/tools.jpg', h: 'Good gear for work and around the property.', p: "From HiKoki, Alpha Tools, KC Tools and Bossweld to fasteners, welding supplies, gas and farm essentials, Teqco has a wide range for rural, trade and home projects. Tell us what you're working on and we'll help you find what you need." },
 ];
 const DUR = 6000;
 

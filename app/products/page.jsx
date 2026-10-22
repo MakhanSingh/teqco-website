@@ -1,6 +1,7 @@
 import PageHero from '@/components/PageHero';
 import { JumpList, RangesList } from '@/components/RangesList';
 import ProductsCta from '@/components/ProductsCta';
+import Catalogues from '@/components/Catalogues';
 
 export const metadata = {
   title: 'Products | Teqco Condobolin',
@@ -14,11 +15,12 @@ export default function ProductsPage() {
         img="/img/tools.jpg"
         alt="Hand tools on the Teqco store wall"
         crumb="Products"
-        title="Fifteen ranges under one roof"
-        text="From a box of tek screws to a trailer-load of RHS. Pick a range below, or call the store and we will tell you what is on the shelf."
+        title="A whole lot for the job at hand"
+        text="From a box of tek screws to a trailer load of RHS, you'll find a good range of supplies for the farm, the workshop and jobs around the home. Browse our ranges below, or give us a call if you're after something in particular."
       />
       <JumpList />
       <RangesList />
+      <Catalogues />
       <ProductsCta />
     </>
   );

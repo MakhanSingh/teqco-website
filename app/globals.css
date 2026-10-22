@@ -132,7 +132,7 @@
 
   /* Fact strip (icon tile, title, line; hairline between columns) */
   .facts{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-block:44px}
+  .facts .wrap{display:grid;grid-template-columns:repeat(3,1fr);padding-block:44px}
   .facts .cell{padding:4px 36px 4px 0;margin-right:36px;border-right:1px solid var(--line);min-width:0}
   .facts .cell:last-child{border-right:0;margin-right:0;padding-right:0}
   .facts .ic{width:48px;height:48px;border-radius:10px;background:var(--green);color:#fff;display:grid;place-items:center;margin-bottom:18px}
@@ -151,6 +151,7 @@
   .about ul{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:12px}
   .about li{display:flex;gap:12px;align-items:flex-start;font-size:17.5px}
   .about li svg{width:20px;height:20px;flex-shrink:0;margin-top:3px;fill:none;stroke:var(--green);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+  .about li b{color:var(--ink)}
   .about .btn{margin-top:30px}
 
   /* News cards (rounded, label top, caption bottom) */
@@ -211,6 +212,7 @@
   .form .ok.show{display:block}
 
   /* FAQ two-column boxed */
+  .faq{background:var(--surface);border-top:1px solid var(--line)}
   .faq .sec-row{margin-bottom:34px}
   .fgrid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
   .faq details{border:1px solid var(--line);border-radius:6px;background:var(--paper)}
@@ -248,8 +250,11 @@
     .sec-row .side{padding-top:0}
     .ngrid{grid-template-columns:1fr 1fr}
     .pgrid{grid-template-columns:1fr 1fr;gap:16px}
-    .facts .wrap{grid-template-columns:1fr 1fr;row-gap:32px}
-    .facts .cell:nth-child(2n){border-right:0;margin-right:0;padding-right:0}
+    .facts .wrap{grid-template-columns:1fr;row-gap:0;padding-block:8px}
+    .facts .cell{display:grid;grid-template-columns:44px 1fr;column-gap:16px;border-right:0;margin-right:0;padding:20px 0;border-bottom:1px solid var(--line)}
+    .facts .cell:last-child{border-bottom:0}
+    .facts .ic{width:44px;height:44px;grid-row:1/3;margin:0}
+    .facts span{max-width:none}
     .fgrid{grid-template-columns:1fr 1fr}
     .fgrid2{grid-template-columns:1fr}
   }
@@ -408,3 +413,33 @@
     .range .body{padding:20px 18px}
     .range .acts .btn{width:100%;justify-content:center}
   }
+
+  /* Contact details block (phone, email, find us, hours) */
+  .cdetails{margin:28px 0 0;display:grid;gap:18px;max-width:420px}
+  .cdetails > div{display:grid;gap:6px}
+  .cdetails dt{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+  .cdetails dt svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .cdetails dd{margin:0;font-size:18px;line-height:1.45}
+  .cdetails dd a{color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:3px}
+  .cdetails dd a:hover{text-decoration-color:#fff}
+  .cdetails .hrow{display:flex;justify-content:space-between;gap:16px;font-size:16px}
+  .cdetails .hrow b{font-family:var(--display);font-weight:600}
+  .cdetails .hrow .closed{color:rgba(255,255,255,.55);font-weight:500}
+  .contact .num,.contact .mail,.contact .addr,.contact .hours{display:none}
+  /* CTA band details: links */
+  .ctaband .details a{color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:3px}
+  .ctaband .details a:hover{text-decoration-color:#fff}
+  /* Footer: clickable visit details and agency credit */
+  .fgrid .fgrid li a{color:var(--muted)}
+  .fbar .credit a{color:var(--green);font-weight:600}
+  /* Catalogues */
+  .catalogues{background:var(--surface);border-top:1px solid var(--line)}
+  .catlist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .catlist a{display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--paper);border:1px solid var(--line);border-radius:6px;font-family:var(--display);font-weight:600;font-size:17px;color:var(--ink);transition:border-color .15s,color .15s}
+  .catlist a:hover{border-color:var(--green);color:var(--green)}
+  .catlist .ic{width:40px;height:40px;border-radius:8px;background:var(--green);color:#fff;display:grid;place-items:center;flex-shrink:0}
+  .catlist .ic svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+  .catlist .name{flex:1}
+  .catlist .out svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:.6}
+  .map{padding-block:0 96px}
+  @media (max-width:600px){ .catlist{grid-template-columns:1fr} .cdetails dd{font-size:17px} }

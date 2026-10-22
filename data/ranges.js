@@ -1,15 +1,16 @@
-// The 15 product ranges, named exactly as the client listed them.
+// The 15 product ranges, named exactly as the client listed them. `ranges` keeps the
+// client's original order (used on the home grid); `rangesAZ` is alphabetical (menus, lists).
 export const ranges = [
   { slug: 'steel', img: 'steel.jpg', alt: 'Stacked steel sheet', title: 'Steel, Roofing, Mesh', sub: 'Steeline, Lysaght, Arc Metalcentre, Steel Supplies', brands: ['Steeline', 'Lysaght', 'Arc Metalcentre', 'Steel Supplies'],
-    desc: 'RHS, SHS, pipe, angle, flat bar, plate and sheet in the common sizes, plus reinforcing mesh, roofing and wall cladding, purlins and flashings. Steel is cut to length on request and we can fold sheet up to 3mm in-store.' },
+    desc: 'A good range of steel sections, sheet, mesh and roofing supplies for farm, building and workshop jobs. From RHS and SHS to pipe, angle, flat bar, rod and channel, we stock a variety of common sizes, with cutting to length available on selected products. We also offer sheet metal guillotining and folding up to 3mm thick.' },
   { slug: 'welding', img: 'welding.jpg', alt: 'Welder at work in a helmet', title: 'Welding Equipment & Power Tools', sub: 'Weldclass, HiKoki, Metabo', brands: ['Weldclass', 'HiKoki', 'Metabo'],
-    desc: 'MIG, TIG and stick welders with wire, rods, gas and consumables, plus helmets and gloves. Cordless and corded drills, grinders, saws, drivers and batteries from the brands tradies trust. Demo a kit at the counter.' },
+    desc: 'From welders, wire and rods to grinders, drills, saws and cordless tools, we carry equipment and consumables for the workshop and job site. We also stock welding accessories and protective gear to help you get the job done.' },
   { slug: 'trailers', img: 'trailer.jpg', alt: 'Tandem car trailer', title: 'A-teq Trailers', sub: 'Built locally. See the A-teq range', brands: ['A-teq'],
-    desc: 'Box, cage, tandem and custom trailers built locally by A-teq, with the parts and spares to keep them on the road: couplings, jockey wheels, lights, hubs and bearings.' },
+    desc: 'Looking for a trailer for work or around the property? Ask us about A-teq box, cage and tandem trailers, including custom options, along with trailer parts and accessories.' },
   { slug: 'gas', img: 'gas.jpg', alt: 'Red LPG gas cylinder', title: 'Industrial & Domestic Gas', sub: 'Speed Gas, Origin', brands: ['Speed Gas', 'Origin'],
-    desc: 'LPG for the home, the farm and the forklift, and industrial gases for welding and cutting. Cylinder swap and refills over the counter, with regulators, hoses and fittings in stock.' },
+    desc: 'Teqco is a local agent for Origin Energy LPG and Speedgas, offering gas bottle exchange for homes, farms, businesses and workshops. Whether you need LPG for the property or welding gases for the job, contact the team to find out about available cylinders and exchange options.' },
   { slug: 'abrasives', img: 'fasteners.jpg', alt: 'Driver bits and fasteners', title: 'Abrasives & Fasteners', sub: 'Addler, AllFasteners, Specfast', brands: ['Addler', 'AllFasteners', 'Specfast'],
-    desc: 'Cutting, grinding and flap discs, sanding and wire brushes. Bolts, nuts and washers in metric and imperial, tek screws, anchors, rivets, threaded rod and the odd sizes you cannot find anywhere else.' },
+    desc: 'From cutting and grinding discs to bolts, nuts, washers, tek screws, anchors and rivets, we stock a practical range of workshop and building essentials in a variety of sizes.' },
   { slug: 'augers', img: 'auger.jpg', alt: 'Grain auger beside a tractor', title: 'Grainline Augers', sub: 'Grain handling for harvest', brands: ['Grainline'],
     desc: 'Grain augers and spare parts for harvest, including flighting, gearboxes, belts and drive components. Talk to us early in the season so the parts are on the shelf when you need them.' },
   { slug: 'compressors', img: null, alt: '', title: 'Peerless Air Compressors', sub: 'Workshop and portable units', brands: ['Peerless'],
@@ -32,10 +33,27 @@ export const ranges = [
     desc: 'Gate fittings from Rotech, trailer parts from Ark, industrial paint, Reefe pumps, chain and cable, rubber matting, wheels and castors from Allied Industrial, Ultragrime wipes and the everyday hardware that keeps a property running.' },
 ];
 
+export const rangesAZ = [...ranges].sort((a, b) => a.title.localeCompare(b.title, 'en-AU'));
+
+// Brochures and catalogues carried over from the current teqco.com.au products page.
+export const catalogues = [
+  { name: 'KC Tools Catalogue', url: 'https://www.kctools.com.au/catalogues' },
+  { name: 'HiKoki Power Tools Catalogue', url: 'https://hikokipowertools.com.au/media/3136/hik38566-21-v2-hikoki-product-catalogue-web.pdf' },
+  { name: 'Weldclass Catalogue', url: 'https://jwlmarketingnsw.sharepoint.com/sites/companyshares/Marketing_General/Forms/AllItems.aspx?id=%2Fsites%2Fcompanyshares%2FMarketing%5FGeneral%2FCatalogues%2FWeldclass%20Catalogue%5FEd%2006%5F2020%2FWorking%20Files%2FWeldclass%5FCATALOGUE%5F2022%5FWeb%20Download%2Epdf&parent=%2Fsites%2Fcompanyshares%2FMarketing%5FGeneral%2FCatalogues%2FWeldclass%20Catalogue%5FEd%2006%5F2020%2FWorking%20Files&p=true&ga=1' },
+  { name: 'Alpha Catalogue', url: 'http://cdn.sheffieldblades.com.au/ecatalogue/AlphaCatalogueEd19/8/' },
+];
+
 export const store = {
   phone: '02 6895 4180',
   tel: 'tel:+61268954180',
-  email: 'terry@teqco.com.au',
+  email: 'sales@teqco.com.au',
   address: '22 Bathurst Street, Condobolin NSW 2877',
+  addressShort: '22 Bathurst St, Condobolin NSW 2877',
+  corner: 'Corner of Bathurst and Denison Streets',
   mapsUrl: 'https://www.google.com/maps/search/22+Bathurst+Street+Condobolin+NSW+2877',
+  hours: 'Monday to Friday, 7:00am to 5:00pm',
+  // Social profile URLs still to be supplied by the client.
+  facebook: '#',
+  linkedin: '#',
+  agency: { name: 'Think Creative Agency', url: 'https://thinkcreativeagency.com.au' },
 };

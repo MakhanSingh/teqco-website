@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ranges, store } from '@/data/ranges';
+import { rangesAZ as ranges, store } from '@/data/ranges';
 import { PhoneIcon, PinIcon, MailIcon, ClockIcon, ChevronDown, FacebookIcon, LinkedInIcon } from './Icons';
 
 const nav = [
@@ -30,13 +30,13 @@ export default function Header() {
       <div className="topbar">
         <div className="wrap">
           <ul>
-            <li><PinIcon /><span>22 Bathurst St, Condobolin NSW 2877</span></li>
+            <li><PinIcon /><a href={store.mapsUrl} target="_blank" rel="noopener">{store.addressShort}</a></li>
             <li><MailIcon /><a href={`mailto:${store.email}`}>{store.email}</a></li>
             <li><ClockIcon /><span>Mon to Fri, 7am to 5pm</span></li>
           </ul>
           <div className="social">
-            <a href="#" aria-label="Facebook"><FacebookIcon /></a>
-            <a href="#" aria-label="LinkedIn"><LinkedInIcon /></a>
+            <a href={store.facebook} aria-label="Facebook" target="_blank" rel="noopener"><FacebookIcon /></a>
+            <a href={store.linkedin} aria-label="LinkedIn" target="_blank" rel="noopener"><LinkedInIcon /></a>
           </div>
         </div>
       </div>

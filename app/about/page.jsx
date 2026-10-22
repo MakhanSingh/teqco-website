@@ -1,7 +1,6 @@
 import PageHero from '@/components/PageHero';
 import StorySection from '@/components/StorySection';
 import ServicesSection from '@/components/ServicesSection';
-import FactStrip from '@/components/FactStrip';
 import BrandMarquee from '@/components/BrandMarquee';
 import AboutCta from '@/components/AboutCta';
 
@@ -17,12 +16,11 @@ export default function AboutPage() {
         img="/img/about-tools.jpg"
         alt="Racks of hand tools in the Teqco workshop"
         crumb="About"
-        title="Local know-how, serious stock"
-        text="Teqco is the comprehensive retail outlet for the rural, trade and handyman market on the corner of Bathurst and Denison Streets, Condobolin."
+        title="Local know-how. The gear to get the job done."
+        text="Your local stop for steel, tools, hardware and rural supplies in Condobolin. Whether you’re working on the farm, on the tools or tackling a job at home, we’re here to help you find what you need."
       />
       <StorySection />
       <ServicesSection />
-      <FactStrip />
       <BrandMarquee noTop />
       <AboutCta />
     </>

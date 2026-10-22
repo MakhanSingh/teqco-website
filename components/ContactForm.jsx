@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { ranges } from '@/data/ranges';
+import { rangesAZ as ranges } from '@/data/ranges';
 
 // Mock submit for now: the live site will post this to the store's email.
 export default function ContactForm() {
@@ -29,14 +29,13 @@ export default function ContactForm() {
         <div className="radios">
           <label><input type="radio" name="type" id="type-gen" value="general" defaultChecked /> General enquiry</label>
           <label><input type="radio" name="type" id="type-quote" value="quote" /> Quote request</label>
-          <label><input type="radio" name="type" id="type-trade" value="trade" /> Trade account</label>
         </div>
       </div>
       <div className="full">
         <label htmlFor="area">Area of enquiry *</label>
         <select id="area" name="area" defaultValue={ranges[0].title}>
           {ranges.map((r) => <option key={r.slug} value={r.title}>{r.title}</option>)}
-          <option value="Sheet metal cutting & folding">Sheet metal cutting &amp; folding</option>
+          <option value="Sheet metal cutting & folding">Sheet metal cutting &amp; folding</option><option value="Something else">Something else</option>
         </select>
       </div>
       <div className="full">

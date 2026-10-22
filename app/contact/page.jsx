@@ -16,11 +16,11 @@ export default function Contact() {
         alt="Stacked steel sheet"
         crumb="Contact Us"
         title="Got a question? Give us a call."
-        text="Product range, sizes, a quote for a cut or a trade account. Call, drop in, or send an enquiry and we will get back to you as soon as we can."
+        text="Need help with our products, sizes or a quote? Whether you’re planning a job or looking for the right materials, give us a call, drop into the store or send us an enquiry. We’re happy to help."
       />
       <ContactPage />
       <MapSection />
-      <FaqSection tight />
+      <FaqSection />
     </>
   );
 }
