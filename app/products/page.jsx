@@ -5,7 +5,7 @@ import Catalogues from '@/components/Catalogues';
 
 export const metadata = {
   title: 'Products | Teqco Condobolin',
-  description: 'Fifteen ranges under one roof: steel, roofing and mesh, welding and power tools, trailers, gas, fasteners, augers, compressors, oils, sheds, tanks, garden edging, hand tools, safety, automotive and general merchandise.',
+  description: 'Steel, roofing and mesh, welding and power tools, trailers, gas, fasteners, augers, compressors, oils, sheds, tanks, garden edging, hand tools, safety, automotive and general merchandise.',
 };
 
 export default function ProductsPage() {

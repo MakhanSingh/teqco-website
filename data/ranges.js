@@ -28,7 +28,7 @@ export const ranges = [
   { slug: 'safety', img: 'boots.jpg', alt: 'Steel cap work boot', title: 'Work Safety & Boots', sub: 'Maxisafe, Beaver', brands: ['Maxisafe', 'Beaver'],
     desc: 'Steel cap and composite toe boots, gloves, hi-vis workwear, eye, ear and respiratory protection, sunscreen and first aid.' },
   { slug: 'automotive', img: 'truck.jpg', alt: 'Road train on an outback highway', title: 'Truck & Automotive Supplies', sub: 'Parts, batteries, accessories', brands: [],
-    desc: 'Batteries, filters, lights, tie-downs, ratchet straps, tow balls, mudflaps and accessories for trucks, utes and farm vehicles.' },
+    desc: 'Lights, tie-downs, ratchet straps, tow balls, mudflaps and accessories for trucks, utes and farm vehicles.' },
   { slug: 'general', img: 'castors.jpg', alt: 'Swivel castor wheel', title: 'General Merchandise', sub: 'Gate fittings, trailer parts, paint, pumps, chain, matting, castors', brands: ['Rotech', 'Ark', 'Reefe', 'Allied Industrial', 'Ultragrime'],
     desc: 'Gate fittings from Rotech, trailer parts from Ark, industrial paint, Reefe pumps, chain and cable, rubber matting, wheels and castors from Allied Industrial, Ultragrime wipes and the everyday hardware that keeps a property running.' },
 ];

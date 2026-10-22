@@ -1,7 +1,6 @@
 import PageHero from '@/components/PageHero';
 import ContactPage from '@/components/ContactPage';
 import MapSection from '@/components/MapSection';
-import FaqSection from '@/components/FaqSection';
 
 export const metadata = {
   title: 'Contact Teqco | Condobolin',
@@ -20,7 +19,6 @@ export default function Contact() {
       />
       <ContactPage />
       <MapSection />
-      <FaqSection />
     </>
   );
 }
