@@ -6,9 +6,9 @@ import { ChevronLeft, ChevronRight } from './Icons';
 import Pic from './Pic';
 
 const slides = [
-  { img: 'hero-welding.jpg', h: 'Your local rural, trade and hardware supplier', p: 'Teqco stocks a comprehensive range of steel sections, sheet and mesh, hand and power tools, fasteners and hardware, right here in Condobolin. Fast, friendly service from people who know the land.' },
-  { img: 'steel.jpg', h: 'Steel for the jobs that matter', p: 'From RHS and SHS to sheet, mesh and roofing, we supply a wide range of steel products, with cutting to length and sheet metal folding up to 3mm.' },
-  { img: 'tools.jpg', h: 'Good gear for work and around the property.', p: "From HiKoki, Alpha Tools, KC Tools and Bossweld to fasteners, welding supplies, gas and farm essentials, Teqco has a wide range for rural, trade and home projects. Tell us what you're working on and we'll help you find what you need." },
+  { img: 'hero-welding.jpg', alt: 'Welder working with a MIG torch in a shower of sparks', h: 'Your local rural, trade and hardware supplier', p: 'Teqco stocks a comprehensive range of steel sections, sheet and mesh, hand and power tools, fasteners and hardware, right here in Condobolin. Fast, friendly service from people who know the land.' },
+  { img: 'steel.jpg', alt: 'Stacked steel sheet ready for cutting', h: 'Steel for the jobs that matter', p: 'From RHS and SHS to sheet, mesh and roofing, we supply a wide range of steel products, with cutting to length and sheet metal folding up to 3mm.' },
+  { img: 'tools.jpg', alt: 'Hand tools displayed on the Teqco store wall', h: 'Good gear for work and around the property.', p: "From HiKoki, Alpha Tools, KC Tools and Bossweld to fasteners, welding supplies, gas and farm essentials, Teqco has a wide range for rural, trade and home projects. Tell us what you're working on and we'll help you find what you need." },
 ];
 const DUR = 6000;
 
@@ -54,7 +54,7 @@ export default function Hero() {
   return (
     <section className="hero" id="hero" aria-label="Featured" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(document.hidden)}>
       {slides.map((sl, k) => (
-        <div key={sl.img} className={`slide${k === i ? ' on' : ''}`} aria-hidden={k !== i}>{(k === 0 || rest || k === i) && <Pic src={sl.img} alt="" sizes="(max-width: 600px) 320px, 100vw" priority={k === 0} />}</div>
+        <div key={sl.img} className={`slide${k === i ? ' on' : ''}`} aria-hidden={k !== i}>{(k === 0 || rest || k === i) && <Pic src={sl.img} alt={sl.alt} sizes="(max-width: 600px) 320px, 100vw" priority={k === 0} />}</div>
       ))}
       <div className="wrap">
         <div id="heroText">

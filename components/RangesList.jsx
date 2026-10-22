@@ -24,7 +24,7 @@ export function RangesList() {
           <article className="range" id={r.slug} key={r.slug}>
             <figure>
               {r.img
-                ? <Pic src={r.img} alt="" sizes="(max-width:980px) 100vw, 500px" />
+                ? <Pic src={r.img} alt={r.alt} sizes="(max-width:980px) 100vw, 500px" />
                 : <div className="noimg"><CompressorIcon /></div>}
             </figure>
             <div className="body">
