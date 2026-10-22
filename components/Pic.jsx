@@ -20,7 +20,7 @@ export default function Pic({ src, alt = '', sizes = '100vw', priority = false, 
       height={meta.h}
       loading={priority ? 'eager' : 'lazy'}
       fetchPriority={priority ? 'high' : undefined}
-      decoding={priority ? 'sync' : 'async'}
+      decoding={priority ? undefined : 'async'}
       className={className}
       style={style}
     />

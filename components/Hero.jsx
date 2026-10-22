@@ -14,7 +14,7 @@ const DUR = 6000;
 
 export default function Hero() {
   // Preload the LCP image; the other slides mount once the page is idle.
-  preload('/img/w/hero-welding-800.webp', { as: 'image', fetchPriority: 'high', imageSrcSet: '/img/w/hero-welding-480.webp 480w, /img/w/hero-welding-800.webp 800w, /img/w/hero-welding-1200.webp 1200w', imageSizes: '100vw' });
+  preload('/img/w/hero-welding-800.webp', { as: 'image', fetchPriority: 'high', imageSrcSet: '/img/w/hero-welding-480.webp 480w, /img/w/hero-welding-800.webp 800w, /img/w/hero-welding-1200.webp 1200w', imageSizes: '(max-width: 600px) 320px, 100vw' });
   const [i, setI] = useState(0);
   const [rest, setRest] = useState(false);
   const [out, setOut] = useState(false);
@@ -54,7 +54,7 @@ export default function Hero() {
   return (
     <section className="hero" id="hero" aria-label="Featured" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(document.hidden)}>
       {slides.map((sl, k) => (
-        <div key={sl.img} className={`slide${k === i ? ' on' : ''}`} aria-hidden={k !== i}>{(k === 0 || rest || k === i) && <Pic src={sl.img} alt="" sizes="100vw" priority={k === 0} />}</div>
+        <div key={sl.img} className={`slide${k === i ? ' on' : ''}`} aria-hidden={k !== i}>{(k === 0 || rest || k === i) && <Pic src={sl.img} alt="" sizes="(max-width: 600px) 320px, 100vw" priority={k === 0} />}</div>
       ))}
       <div className="wrap">
         <div id="heroText">
