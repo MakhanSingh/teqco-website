@@ -13,7 +13,7 @@ export const ranges = [
     desc: 'From cutting and grinding discs to bolts, nuts, washers, tek screws, anchors and rivets, we stock a practical range of workshop and building essentials in a variety of sizes.' },
   { slug: 'augers', img: 'auger-client.jpg', alt: 'Grainline grain auger', title: 'Grainline Augers', sub: 'Grain handling for harvest', brands: ['Grainline'],
     desc: 'Grain augers and spare parts for harvest, including flighting, gearboxes, belts and drive components. Talk to us early in the season so the parts are on the shelf when you need them.' },
-  { slug: 'compressors', img: null, alt: '', title: 'Peerless Air Compressors', sub: 'Workshop and portable units', brands: ['Peerless'],
+  { slug: 'compressors', img: 'compressor-client.jpg', alt: 'Peerless petrol air compressor', title: 'Peerless Air Compressors', sub: 'Workshop and portable units', brands: ['Peerless'],
     desc: 'Workshop and portable air compressors, from small direct-drive units to belt-drive workshop models, with hoses, fittings, couplers and air tools to suit.' },
   { slug: 'oils', img: 'oils.jpg', alt: 'Grease gun on a timber bench', title: 'Atlantic Oils & Lubricants', sub: 'Engine, hydraulic and gear oils', brands: ['Atlantic Oil'],
     desc: 'Engine, hydraulic, gear and transmission oils in packs and drums, plus greases, grease guns, coolants and workshop fluids for trucks, tractors and machinery.' },
