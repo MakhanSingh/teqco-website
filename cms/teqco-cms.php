@@ -70,7 +70,7 @@ add_action('init', function () {
     'labels' => teqco_labels('Site Settings', 'Site Settings'),
     'show_in_menu' => false,
     'supports' => ['title'],
-    'rest_base' => 'settings',
+    'rest_base' => 'site-settings', // not 'settings': that would shadow the core /wp/v2/settings route
     'capabilities' => ['create_posts' => 'do_not_allow'],
   ]);
 });
@@ -452,3 +452,74 @@ add_action('admin_bar_menu', function ($bar) {
   $next = wp_next_scheduled('teqco_rebuild');
   $bar->add_node(['id' => 'teqco-deploy', 'title' => $next ? 'Website: update queued' : 'Website deploy', 'href' => admin_url('options-general.php?page=teqco-deploy')]);
 }, 90);
+
+/* -------------------------------------------------------------------------
+ * 7. Hardening
+ * ---------------------------------------------------------------------- */
+// No theme/plugin file editor in wp-admin.
+if (!defined('DISALLOW_FILE_EDIT')) define('DISALLOW_FILE_EDIT', true);
+
+// Security headers on every CMS response (admin, login and API).
+add_action('send_headers', 'teqco_security_headers');
+add_action('admin_init', 'teqco_security_headers');
+add_action('login_init', 'teqco_security_headers');
+add_filter('rest_pre_serve_request', function ($v) { teqco_security_headers(); return $v; });
+function teqco_security_headers() {
+  if (headers_sent()) return;
+  header('Strict-Transport-Security: max-age=31536000');
+  header('X-Content-Type-Options: nosniff');
+  header('X-Frame-Options: SAMEORIGIN');
+  header('Referrer-Policy: strict-origin-when-cross-origin');
+  header_remove('X-Powered-By');
+}
+
+// Hide usernames: no author archives or ?author= lookups, no author data in oEmbed.
+add_action('template_redirect', function () {
+  if (isset($_GET['author']) || is_author()) { wp_redirect(TEQCO_FRONTEND . '/', 301); exit; }
+}, 1);
+add_filter('redirect_canonical', function ($url, $req) { return preg_match('/[?&]author=/i', (string) $req) ? false : $url; }, 10, 2);
+add_filter('oembed_response_data', function ($d) { unset($d['author_name'], $d['author_url']); return $d; });
+add_filter('the_generator', '__return_empty_string');
+// Same message for a wrong username and a wrong password.
+add_filter('login_errors', fn($msg) => strpos((string) $msg, 'Too many failed logins') !== false ? $msg : 'Incorrect login details.');
+
+// Login lockout: 5 failed attempts from one IP within 15 minutes locks that IP for 15 minutes;
+// 20 failures on one username within an hour lock that username for 15 minutes.
+function teqco_client_ip() {
+  $remote = $_SERVER['REMOTE_ADDR'] ?? '';
+  if (filter_var($remote, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE)) return $remote;
+  // Behind the Cloudways proxy: the last X-Forwarded-For entry is the one the proxy added.
+  $xff = array_filter(array_map('trim', explode(',', $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '')));
+  $last = end($xff);
+  if ($last && filter_var($last, FILTER_VALIDATE_IP)) return $last;
+  return $_SERVER['HTTP_X_REAL_IP'] ?? $remote;
+}
+function teqco_ip_is_public($ip) { return (bool) filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE); }
+
+add_filter('authenticate', function ($user, $username) {
+  $ip = teqco_client_ip();
+  if (teqco_ip_is_public($ip) && get_transient('teqco_lock_ip_' . md5($ip))) {
+    return new WP_Error('teqco_locked', 'Too many failed logins. Please try again in 15 minutes.');
+  }
+  if ($username && get_transient('teqco_lock_user_' . md5(strtolower($username)))) {
+    return new WP_Error('teqco_locked', 'Too many failed logins. Please try again in 15 minutes.');
+  }
+  return $user;
+}, 30, 2);
+
+add_action('wp_login_failed', function ($username) {
+  $ip = teqco_client_ip();
+  if (teqco_ip_is_public($ip)) {
+    $k = 'teqco_fail_ip_' . md5($ip); $n = (int) get_transient($k) + 1;
+    set_transient($k, $n, 15 * MINUTE_IN_SECONDS);
+    if ($n >= 5) set_transient('teqco_lock_ip_' . md5($ip), $ip, 15 * MINUTE_IN_SECONDS);
+  }
+  $k = 'teqco_fail_user_' . md5(strtolower((string) $username)); $n = (int) get_transient($k) + 1;
+  set_transient($k, $n, HOUR_IN_SECONDS);
+  if ($n >= 20) set_transient('teqco_lock_user_' . md5(strtolower((string) $username)), 1, 15 * MINUTE_IN_SECONDS);
+  update_option('teqco_last_failed_login', ['ip' => $ip, 'time' => time()], false);
+});
+add_action('wp_login', function ($login) {
+  delete_transient('teqco_fail_ip_' . md5(teqco_client_ip()));
+  delete_transient('teqco_fail_user_' . md5(strtolower($login)));
+});
