@@ -377,14 +377,23 @@ add_filter('admin_bar_menu', function ($bar) {
  * 6. Auto-rebuild: tell GitHub to rebuild and redeploy the website after content changes
  * ---------------------------------------------------------------------- */
 define('TEQCO_GITHUB_REPO', 'MakhanSingh/teqco-website');
-define('TEQCO_REBUILD_DELAY', 60); // seconds; edits made within this window share one build
 define('TEQCO_CONTENT_TYPES', ['range', 'brand', 'slide', 'catalogue', 'teqco_settings']);
 
-/** Queue one rebuild a short while from now (several quick edits collapse into one). */
+/**
+ * Mark that this request changed content. One rebuild request is sent to GitHub when the
+ * request finishes, however many hooks fired. GitHub queues it behind a build that is still
+ * running, so quick successive edits end up in the next build without cutting one off.
+ */
 function teqco_queue_rebuild($reason) {
+  $GLOBALS['teqco_rebuild_reason'] = $reason;
   update_option('teqco_rebuild_reason', $reason, false);
-  if (!wp_next_scheduled('teqco_rebuild')) wp_schedule_single_event(time() + TEQCO_REBUILD_DELAY, 'teqco_rebuild');
 }
+add_action('shutdown', function () {
+  if (empty($GLOBALS['teqco_rebuild_reason']) || !empty($GLOBALS['teqco_rebuild_sent'])) return;
+  $GLOBALS['teqco_rebuild_sent'] = true;
+  if (function_exists('fastcgi_finish_request')) fastcgi_finish_request(); // don't make the editor wait
+  teqco_send_rebuild();
+});
 
 add_action('transition_post_status', function ($new, $old, $post) {
   if (!in_array($post->post_type, TEQCO_CONTENT_TYPES, true)) return;
@@ -405,7 +414,7 @@ add_action('before_delete_post', function ($id) {
   if ($p && in_array($p->post_type, TEQCO_CONTENT_TYPES, true) && $p->post_status === 'publish') teqco_queue_rebuild('deleted ' . $p->post_type . ': ' . $p->post_title);
 });
 
-add_action('teqco_rebuild', 'teqco_send_rebuild');
+add_action('teqco_rebuild', 'teqco_send_rebuild'); // legacy scheduled event, if one is still queued
 function teqco_send_rebuild() {
   $token = get_option('teqco_github_token');
   if (!$token) { update_option('teqco_rebuild_last', ['time' => time(), 'ok' => false, 'msg' => 'No GitHub token set'], false); return false; }
@@ -433,9 +442,8 @@ function teqco_deploy_page() {
   }
   $last = get_option('teqco_rebuild_last'); $next = wp_next_scheduled('teqco_rebuild'); $has = (bool) get_option('teqco_github_token');
   echo '<div class="wrap"><h1>Website deploy</h1>';
-  echo '<p>When content is published or updated, the website at <a href="' . esc_url(TEQCO_FRONTEND) . '" target="_blank">teqco.com.au</a> rebuilds automatically about ' . (int) (TEQCO_REBUILD_DELAY / 60) . ' minute later and goes live 3–5 minutes after that.</p>';
+  echo '<p>When content is published or updated, the website at <a href="' . esc_url(TEQCO_FRONTEND) . '" target="_blank">teqco.com.au</a> rebuilds automatically and goes live about 2 minutes later.</p>';
   echo '<table class="form-table"><tr><th>Last rebuild request</th><td>' . ($last ? esc_html(wp_date('j M Y, g:i a', $last['time']) . ' – ' . $last['msg']) : 'None yet') . '</td></tr>';
-  echo '<tr><th>Queued</th><td>' . ($next ? esc_html('Yes, at ' . wp_date('g:i:s a', $next)) : 'No') . '</td></tr>';
   echo '<tr><th>Build log</th><td><a href="https://github.com/' . TEQCO_GITHUB_REPO . '/actions" target="_blank">GitHub Actions</a></td></tr></table>';
   echo '<form method="post">'; wp_nonce_field('teqco_deploy', 'teqco_deploy_nonce');
   echo '<h2>GitHub token</h2><p>' . ($has ? 'A token is saved. Paste a new one only to replace it.' : '<strong>No token saved yet, so automatic rebuilds are off.</strong>') . '</p>';
@@ -450,7 +458,7 @@ function teqco_deploy_page() {
 add_action('admin_bar_menu', function ($bar) {
   if (!current_user_can('edit_posts')) return;
   $next = wp_next_scheduled('teqco_rebuild');
-  $bar->add_node(['id' => 'teqco-deploy', 'title' => $next ? 'Website: update queued' : 'Website deploy', 'href' => admin_url('options-general.php?page=teqco-deploy')]);
+  $bar->add_node(['id' => 'teqco-deploy', 'title' => 'Website deploy', 'href' => admin_url('options-general.php?page=teqco-deploy')]);
 }, 90);
 
 /* -------------------------------------------------------------------------

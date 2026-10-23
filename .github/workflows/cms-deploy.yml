@@ -13,10 +13,10 @@ on:
     types: [cms-update]
   workflow_dispatch:
 
-# A newer content change supersedes a build that is still running.
+# Builds run one at a time; GitHub keeps only the newest waiting build, so it always has the latest content.
 concurrency:
   group: cms-deploy
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: write
