@@ -1,0 +1,104 @@
+# Rebuilds and redeploys the site whenever content changes in the Teqco CMS.
+# Triggered by WordPress (repository_dispatch "cms-update"), or by hand from the Actions tab.
+#
+# Repository secrets used:
+#   CLOUDWAYS_EMAIL, CLOUDWAYS_API_KEY  Cloudways login email and API key (Account > API)
+#   VERCEL_TOKEN                        optional; when set, the Vercel mirror is redeployed too
+name: Rebuild from CMS
+
+on:
+  repository_dispatch:
+    types: [cms-update]
+  workflow_dispatch:
+
+# A newer content change supersedes a build that is still running.
+concurrency:
+  group: cms-deploy
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+env:
+  CLOUDWAYS_SERVER_ID: 667011
+  CLOUDWAYS_APP_ID: 6741043
+  VERCEL_ORG_ID: team_VFw283Yhc58CR8rTjOoQnh7E
+  VERCEL_PROJECT_ID: prj_36aWBWOtQSTJydRsJkNGwJ0AaGMQ
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build (pulls content and images from the CMS)
+        run: npm run build
+
+      - name: Publish the build to the cloudways branch
+        run: |
+          git config user.name "teqco-cms-bot"
+          git config user.email "actions@users.noreply.github.com"
+          WT=$(mktemp -d)
+          if git ls-remote --exit-code --heads origin cloudways >/dev/null; then
+            git fetch -q origin cloudways
+            git worktree add -q "$WT" -B cloudways origin/cloudways
+          else
+            git worktree add -q --detach "$WT"
+            git -C "$WT" checkout -q --orphan cloudways
+          fi
+          git -C "$WT" rm -rfq . >/dev/null 2>&1 || true
+          cp -R out/. "$WT"/
+          cp cloudways-htaccess "$WT/.htaccess"
+          git -C "$WT" add -A
+          if git -C "$WT" diff --cached --quiet; then
+            echo "Built site is unchanged; nothing to publish."
+          else
+            git -C "$WT" commit -qm "CMS build $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git -C "$WT" push -q origin cloudways
+          fi
+
+      - name: Pull on Cloudways and clear its cache
+        env:
+          CW_EMAIL: ${{ secrets.CLOUDWAYS_EMAIL }}
+          CW_KEY: ${{ secrets.CLOUDWAYS_API_KEY }}
+        run: |
+          set -euo pipefail
+          API=https://api.cloudways.com/api/v1
+          TOKEN=$(curl -sf -X POST "$API/oauth/access_token" --data-urlencode "email=$CW_EMAIL" --data-urlencode "api_key=$CW_KEY" | jq -r .access_token)
+          [ -n "$TOKEN" ] && [ "$TOKEN" != null ] || { echo "Cloudways login failed"; exit 1; }
+          AUTH="Authorization: Bearer $TOKEN"
+          wait_op() {
+            for i in $(seq 1 60); do
+              DONE=$(curl -sf -H "$AUTH" "$API/operation/$1" | jq -r '.operation.is_completed')
+              [ "$DONE" = "1" ] && return 0
+              sleep 5
+            done
+            echo "Operation $1 did not finish in time"; return 1
+          }
+          OP=$(curl -sf -X POST -H "$AUTH" "$API/git/pull" -d server_id=$CLOUDWAYS_SERVER_ID -d app_id=$CLOUDWAYS_APP_ID -d branch_name=cloudways -d deploy_path= | jq -r .operation_id)
+          echo "Git pull operation $OP"; wait_op "$OP"
+          OP=$(curl -sf -X POST -H "$AUTH" "$API/app/cache/purge" -d server_id=$CLOUDWAYS_SERVER_ID -d app_id=$CLOUDWAYS_APP_ID | jq -r .operation_id)
+          echo "Cache purge operation $OP"; [ "$OP" = null ] || wait_op "$OP"
+
+      - name: Redeploy the Vercel mirror
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then echo "No VERCEL_TOKEN secret; skipping Vercel."; exit 0; fi
+          npx -y vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"
+
+      - name: Check the live site
+        run: |
+          sleep 10
+          curl -sf -o /dev/null -w "teqco.com.au %{http_code}\n" https://teqco.com.au/
