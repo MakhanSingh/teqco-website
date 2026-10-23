@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { rangesAZ, store } from '@/data/ranges';
+import { rangesAZ, store, settings } from '@/lib/cms';
 import { CompressorIcon } from './Icons';
 import Pic from './Pic';
 
@@ -7,7 +7,7 @@ export function JumpList() {
   return (
     <nav className="jump" aria-label="Browse our product ranges">
       <div className="wrap">
-        <span className="eyebrow">Browse Our Product Ranges</span>
+        <span className="eyebrow">{settings.products_jump_label}</span>
         <ul>
           {rangesAZ.map((r) => <li key={r.slug}><a href={`#${r.slug}`}>{r.title}</a></li>)}
         </ul>

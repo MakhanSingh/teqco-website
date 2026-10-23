@@ -20,9 +20,9 @@ export default function ContactDetails() {
       <div>
         <dt><ClockIcon /> Opening Hours</dt>
         <dd>
-          <span className="hrow"><span>Monday to Friday</span><b>7:00am – 5:00pm</b></span>
-          <span className="hrow"><span>Saturday</span><b className="closed">Closed</b></span>
-          <span className="hrow"><span>Sunday</span><b className="closed">Closed</b></span>
+          {store.hoursTable.map((h) => (
+            <span className="hrow" key={h.a}><span>{h.a}</span><b className={/closed/i.test(h.b) ? 'closed' : undefined}>{h.b}</b></span>
+          ))}
         </dd>
       </div>
     </dl>

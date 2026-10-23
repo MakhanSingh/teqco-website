@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/images.mjs",
+    "prebuild": "node scripts/cms-sync.mjs && node scripts/images.mjs",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cms:sync": "node scripts/cms-sync.mjs"
   },
   "dependencies": {
     "next": "16.4.2",

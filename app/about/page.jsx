@@ -4,6 +4,7 @@ import ServicesSection from '@/components/ServicesSection';
 import BrandMarquee from '@/components/BrandMarquee';
 import AboutCta from '@/components/AboutCta';
 import { ogBase } from '@/data/seo';
+import { settings } from '@/lib/cms';
 
 export const metadata = {
   title: 'About Us',
@@ -24,8 +25,8 @@ export default function AboutPage() {
         img="/img/about-tools.jpg"
         alt="Racks of hand tools in the Teqco workshop"
         crumb="About"
-        title="Local know-how. The gear to get the job done."
-        text="Your local stop for steel, tools, hardware and rural supplies in Condobolin. Whether you’re working on the farm, on the tools or tackling a job at home, we’re here to help you find what you need."
+        title={settings.about_hero_title}
+        text={settings.about_hero_text}
       />
       <StorySection />
       <ServicesSection />

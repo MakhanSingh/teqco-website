@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { rangesAZ as ranges, store } from '@/data/ranges';
-import { WEB3FORMS_KEY, WEB3FORMS_URL } from '@/data/forms';
+import { CF7_FEEDBACK_URL, CF7_UNIT_TAG } from '@/lib/config';
 
 const TYPE_LABEL = { general: 'General enquiry', quote: 'Quote request' };
 
@@ -16,30 +16,23 @@ export default function ContactForm() {
     // Honeypot: real visitors never see or tick this box.
     if (d.get('botcheck')) { setStatus('ok'); f.reset(); return; }
 
-    const type = TYPE_LABEL[d.get('type')] || 'Enquiry';
-    const area = d.get('area');
-    const name = `${d.get('fname')} ${d.get('lname')}`.trim();
-    const payload = {
-      access_key: WEB3FORMS_KEY,
-      subject: `${type} – ${area} (teqco.com.au)`,
-      from_name: 'Teqco website',
-      name,
-      email: d.get('email'),
-      phone: d.get('phone') || 'Not provided',
-      enquiry_type: type,
-      area_of_enquiry: area,
-      message: d.get('msg'),
-    };
+    // Sent to Contact Form 7 in the CMS: it emails the store and Flamingo keeps a copy.
+    const body = new FormData();
+    body.set('_wpcf7_unit_tag', CF7_UNIT_TAG);
+    body.set('fname', d.get('fname'));
+    body.set('lname', d.get('lname'));
+    body.set('email', d.get('email'));
+    body.set('phone', d.get('phone') || '');
+    body.set('type', TYPE_LABEL[d.get('type')] || TYPE_LABEL.general);
+    body.set('area', d.get('area'));
+    body.set('msg', d.get('msg'));
+    body.set('source_page', window.location.href);
 
     setStatus('sending');
     try {
-      const res = await fetch(WEB3FORMS_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(payload),
-      });
+      const res = await fetch(CF7_FEEDBACK_URL, { method: 'POST', body, headers: { Accept: 'application/json' } });
       const json = await res.json().catch(() => ({}));
-      if (res.ok && json.success) { setStatus('ok'); f.reset(); }
+      if (res.ok && json.status === 'mail_sent') { setStatus('ok'); f.reset(); }
       else setStatus('error');
     } catch {
       setStatus('error');

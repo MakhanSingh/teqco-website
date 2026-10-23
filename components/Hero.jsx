@@ -4,17 +4,14 @@ import { preload } from 'react-dom';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from './Icons';
 import Pic from './Pic';
+import { slides } from '@/lib/cms';
 
-const slides = [
-  { img: 'hero-welding.jpg', alt: 'Welder working with a MIG torch in a shower of sparks', h: 'Your local rural, trade and hardware supplier', p: 'Teqco stocks a comprehensive range of steel sections, sheet and mesh, hand and power tools, fasteners and hardware, right here in Condobolin. Fast, friendly service from people who know the land.' },
-  { img: 'steel.jpg', alt: 'Stacked steel sheet ready for cutting', h: 'Steel for the jobs that matter', p: 'From RHS and SHS to sheet, mesh and roofing, we supply a wide range of steel products, with cutting to length and sheet metal folding up to 3mm.' },
-  { img: 'tools.jpg', alt: 'Hand tools displayed on the Teqco store wall', h: 'Good gear for work and around the property.', p: "From HiKoki, Alpha Tools, KC Tools and Bossweld to fasteners, welding supplies, gas and farm essentials, Teqco has a wide range for rural, trade and home projects. Tell us what you're working on and we'll help you find what you need." },
-];
 const DUR = 6000;
 
 export default function Hero() {
   // Preload the LCP image; the other slides mount once the page is idle.
-  preload('/img/w/hero-welding-800.webp', { as: 'image', fetchPriority: 'high', imageSrcSet: '/img/w/hero-welding-480.webp 480w, /img/w/hero-welding-800.webp 800w, /img/w/hero-welding-1200.webp 1200w', imageSizes: '(max-width: 600px) 320px, 100vw' });
+  const lcp = `/img/w/${slides[0].img.replace(/\.(jpe?g|png)$/i, '')}`;
+  preload(`${lcp}-800.webp`, { as: 'image', fetchPriority: 'high', imageSrcSet: `${lcp}-480.webp 480w, ${lcp}-800.webp 800w, ${lcp}-1200.webp 1200w`, imageSizes: '(max-width: 600px) 320px, 100vw' });
   const [i, setI] = useState(0);
   const [rest, setRest] = useState(false);
   const [out, setOut] = useState(false);
@@ -62,8 +59,8 @@ export default function Hero() {
           <p className={fx('')}>{s.p}</p>
         </div>
         <div className={fx('actions')}>
-          <Link className="btn btn-cta" href="/products/">Browse Our Range</Link>
-          <Link className="btn btn-ghost" href="/contact/#enquiry">Get a Quote</Link>
+          {s.btn?.label && <Link className="btn btn-cta" href={s.btn.link || '/products/'}>{s.btn.label}</Link>}
+          {s.btn2?.label && <Link className="btn btn-ghost" href={s.btn2.link || '/contact/#enquiry'}>{s.btn2.label}</Link>}
         </div>
         <div className="hero-ctl">
           <button id="prev" aria-label="Previous slide" onClick={() => go(i - 1)}><ChevronLeft /></button>

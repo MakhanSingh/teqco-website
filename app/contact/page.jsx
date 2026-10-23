@@ -2,6 +2,7 @@ import PageHero from '@/components/PageHero';
 import ContactPage from '@/components/ContactPage';
 import MapSection from '@/components/MapSection';
 import { ogBase } from '@/data/seo';
+import { settings } from '@/lib/cms';
 
 export const metadata = {
   title: 'Contact Us',
@@ -22,8 +23,8 @@ export default function Contact() {
         img="/img/steel.jpg"
         alt="Stacked steel sheet"
         crumb="Contact Us"
-        title="Got a question? Give us a call."
-        text="Need help with our products, sizes or a quote? Whether you’re planning a job or looking for the right materials, give us a call, drop into the store or send us an enquiry. We’re happy to help."
+        title={settings.contact_hero_title}
+        text={settings.contact_hero_text}
       />
       <ContactPage />
       <MapSection />

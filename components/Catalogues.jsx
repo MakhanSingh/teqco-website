@@ -1,4 +1,5 @@
-import { catalogues } from '@/data/ranges';
+import { catalogues, settings as s } from '@/lib/cms';
+import Em from './Em';
 
 const PdfIcon = () => <svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" /><path d="M14 3v6h6M9 15h6M9 11h2" /></svg>;
 const OutIcon = () => <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" /></svg>;
@@ -10,9 +11,9 @@ export default function Catalogues() {
         <div className="sec-row">
           <div>
             <span className="eyebrow">Product catalogues</span>
-            <h2>Product brochures <em>and catalogues</em></h2>
+            <h2><Em text={s.products_catalogues_heading} /></h2>
           </div>
-          <div className="side"><p>Browse the full ranges from some of the brands we stock. Catalogues open on the supplier's website.</p></div>
+          <div className="side"><p>{s.products_catalogues_text}</p></div>
         </div>
         <ul className="catlist">
           {catalogues.map((c) => (

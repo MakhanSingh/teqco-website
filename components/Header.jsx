@@ -32,7 +32,7 @@ export default function Header() {
           <ul>
             <li><PinIcon /><a href={store.mapsUrl} target="_blank" rel="noopener">{store.addressShort}</a></li>
             <li><MailIcon /><a href={`mailto:${store.email}`}>{store.email}</a></li>
-            <li><ClockIcon /><span>Mon to Fri, 7am to 5pm</span></li>
+            <li><ClockIcon /><span>{store.hours}</span></li>
           </ul>
           <div className="social">
             <a href={store.facebook} aria-label="Facebook" target="_blank" rel="noopener"><FacebookIcon /></a>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { rangesAZ, store } from '@/data/ranges';
+import { rangesAZ, store, settings } from '@/lib/cms';
 import { FacebookIcon, LinkedInIcon } from './Icons';
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="fgrid">
           <div>
             <Link className="logo" href="/"><img src="/img/logo.jpg" alt="Teqco" width="1600" height="533" loading="lazy" /></Link>
-            <p className="blurb">Comprehensive retail outlet for the rural, trade and handyman market. Steel, tools, fasteners and hardware in Condobolin.</p>
+            <p className="blurb">{settings.footer_blurb}</p>
             <div className="social">
               <a href={store.facebook} aria-label="Facebook" target="_blank" rel="noopener"><FacebookIcon /></a>
               <a href={store.linkedin} aria-label="LinkedIn" target="_blank" rel="noopener"><LinkedInIcon /></a>
@@ -27,7 +27,7 @@ export default function Footer() {
           <div className="ranges">
             <h2>Ranges</h2>
             <div className="cols">
-              {[rangesAZ.slice(0, 8), rangesAZ.slice(8)].map((col, i) => (
+              {[rangesAZ.slice(0, Math.ceil(rangesAZ.length / 2)), rangesAZ.slice(Math.ceil(rangesAZ.length / 2))].map((col, i) => (
                 <ul key={i}>
                   {col.map((r) => <li key={r.slug}><Link href={`/products/#${r.slug}`}>{r.title}</Link></li>)}
                 </ul>
@@ -37,10 +37,10 @@ export default function Footer() {
           <div>
             <h2>Visit</h2>
             <ul>
-              <li><a href={store.mapsUrl} target="_blank" rel="noopener">22 Bathurst Street<br />Condobolin NSW 2877</a></li>
+              <li><a href={store.mapsUrl} target="_blank" rel="noopener">{store.address.split(', ')[0]}<br />{store.address.split(', ').slice(1).join(', ')}</a></li>
               <li><a href={store.tel}>{store.phone}</a></li>
               <li><a href={`mailto:${store.email}`}>{store.email}</a></li>
-              <li>Mon to Fri, 7am to 5pm</li>
+              <li>{store.hours}</li>
             </ul>
           </div>
         </div>

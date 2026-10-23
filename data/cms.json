@@ -1,0 +1,679 @@
+{
+  "generated": "2026-10-23T18:12:39+00:00",
+  "settings": {
+    "phone": "02 6895 4180",
+    "phone_tel": "+61268954180",
+    "email": "sales@teqco.com.au",
+    "address": "22 Bathurst Street, Condobolin NSW 2877",
+    "address_short": "22 Bathurst St, Condobolin NSW 2877",
+    "corner": "Corner of Bathurst and Denison Streets",
+    "hours_summary": "Mon to Fri, 7am to 5pm",
+    "hours": "Monday to Friday | 7:00am – 5:00pm\nSaturday | Closed\nSunday | Closed",
+    "maps_url": "https://www.google.com/maps/search/22+Bathurst+Street+Condobolin+NSW+2877",
+    "facebook": "https://www.facebook.com/teqco/",
+    "linkedin": "https://www.linkedin.com/company/teqco/",
+    "home_grid_eyebrow": "What we stock",
+    "home_grid_heading": "Everything for the *rural, trade and handyman* job",
+    "home_grid_text": "From a box of tek screws to a trailer-load of RHS, Teqco supplies the gear for farm work, trade jobs, workshops and projects around the home.",
+    "home_quote_eyebrow": "Something else?",
+    "home_quote_heading": "Can't find what you're after?",
+    "home_quote_text": "Not sure where to start, or looking for something a little different? Give us a call or send through an enquiry. We'll let you know what we have in store and whether we can help source it.",
+    "home_quote_button": "Ask the team",
+    "home_facts": [
+      {
+        "a": "Open from 7am",
+        "b": "Get an early start with us. We're open Monday to Friday, 7am–5pm."
+      },
+      {
+        "a": "Steel cut to size",
+        "b": "Need a particular length? Ask us about steel cutting and sheet metal folding up to 3mm."
+      },
+      {
+        "a": "Formerly CS Steel",
+        "b": "Find us on the corner of Bathurst and Denison Streets. Drop in and have a chat with the team."
+      }
+    ],
+    "home_about_eyebrow": "About Teqco",
+    "home_about_heading": "Local knowledge. *A good stock.* Friendly service.",
+    "home_about_text": "Based on the corner of Bathurst and Denison Streets in Condobolin, Teqco supplies steel, tools, hardware and much more to farmers, tradies and locals across the district.\n\nFormerly CS Steel, Teqco continues to provide a broad range of products and practical services for jobs on the farm, at work and around the home. Pop in, tell us what you're working on and we'll do our best to point you in the right direction.",
+    "home_about_points": [
+      {
+        "a": "A wide stock under one roof",
+        "b": "Steel, tools, fasteners, hardware and everyday essentials for work and around the property."
+      },
+      {
+        "a": "Practical, local know-how",
+        "b": "Friendly service to help you find the right gear for the job."
+      },
+      {
+        "a": "Serving Condobolin and the district",
+        "b": "Your local supplier for rural, trade and home projects."
+      }
+    ],
+    "home_about_button": "Talk to the team",
+    "home_contact_eyebrow": "Contact",
+    "home_contact_heading": "Got a question? Give us a call.",
+    "home_contact_text": "Product range, sizes or a quote for a cut. Call, drop in, or send an enquiry and we will get back to you as soon as we can.",
+    "about_hero_title": "Local know-how. The gear to get the job done.",
+    "about_hero_text": "Your local stop for steel, tools, hardware and rural supplies in Condobolin. Whether you’re working on the farm, on the tools or tackling a job at home, we’re here to help you find what you need.",
+    "about_story_eyebrow": "Our story",
+    "about_story_heading": "A local name for the *jobs that matter*",
+    "about_story_text": "Located on the corner of Bathurst and Denison Streets in Condobolin, Teqco supplies farmers, tradespeople and handymen across the Lachlan Valley with the steel, tools and hardware they need to get the job done.\n\nPreviously CS Steel, Teqco continues to supply a wide range of steel sections, sheet metal, mesh, hand and power tools, fasteners and general hardware. With practical advice and friendly service, we’re here to help you find the right gear for the job, big or small.",
+    "about_stats": [
+      {
+        "a": "3mm",
+        "b": "Sheet metal cutting and folding in-store"
+      },
+      {
+        "a": "7am",
+        "b": "Open early, Monday to Friday"
+      }
+    ],
+    "about_services_eyebrow": "What we do",
+    "about_services_heading": "More than *just supplies*",
+    "about_services": [
+      {
+        "title": "Steel supply",
+        "text": "From RHS and SHS to pipe, angle, flat bar, sheet metal, mesh and roofing, we stock a wide stock of steel products for farm, building and workshop projects. Cut-to-length options are available on selected products."
+      },
+      {
+        "title": "Cutting and folding",
+        "text": "Need sheet metal cut or folded to size? We offer in-store guillotine cutting and folding for sheet metal up to 3mm thick. Get in touch to discuss your measurements and requirements."
+      },
+      {
+        "title": "Tools and hardware",
+        "text": "From hand and power tools to fasteners, fittings and everyday hardware, we carry the essentials for the workshop, the job site and around the property."
+      }
+    ],
+    "about_services_button": "Explore Our Product Range",
+    "about_cta_heading": "Drop in and see us",
+    "about_cta_text": "You’ll find us on the corner of Bathurst and Denison Streets in Condobolin. Pop in, have a chat with the team and pick up what you need for the next job.\n\nCan't make it in? Give us a call or send through an enquiry and we'll be happy to help.",
+    "products_hero_title": "A whole lot for the job at hand",
+    "products_hero_text": "From a box of tek screws to a trailer load of RHS, you'll find a good range of supplies for the farm, the workshop and jobs around the home. Browse our ranges below, or give us a call if you're after something in particular.",
+    "products_jump_label": "Browse Our Product Ranges",
+    "products_catalogues_heading": "Product brochures *and catalogues*",
+    "products_catalogues_text": "Browse the full ranges from some of the brands we stock. Catalogues open on the supplier's website.",
+    "products_cta_heading": "Can't find what you're after?",
+    "products_cta_text": "If we don't have it on the shelf, we can usually source it. Call us or send an enquiry with sizes and quantities and we will come back with a price.",
+    "contact_hero_title": "Got a question? Give us a call.",
+    "contact_hero_text": "Need help with our products, sizes or a quote? Whether you’re planning a job or looking for the right materials, give us a call, drop into the store or send us an enquiry. We’re happy to help.",
+    "contact_eyebrow": "Contact details",
+    "contact_heading": "Call, email or drop in",
+    "contact_text": "For a quick answer, give us a call or pop into the store. If you need a quote, send through your sizes and quantities using the form below, and we’ll get back to you as soon as we can.",
+    "contact_map_heading": "Find us in Condobolin",
+    "contact_map_text": "22 Bathurst Street, on the corner of Bathurst and Denison Streets.",
+    "footer_blurb": "Comprehensive retail outlet for the rural, trade and handyman market. Steel, tools, fasteners and hardware in Condobolin.",
+    "seo_title": "Teqco | Steel, Tools & Hardware Store in Condobolin NSW",
+    "seo_description": "Teqco is Condobolin’s steel, tools and hardware store. Steel cut to size, roofing and mesh, welding gear, power and hand tools, fasteners, gas, trailers, sheds and more for farm, trade and home.",
+    "cf7_form_id": 66,
+    "hours_table": [
+      {
+        "a": "Monday to Friday",
+        "b": "7:00am – 5:00pm"
+      },
+      {
+        "a": "Saturday",
+        "b": "Closed"
+      },
+      {
+        "a": "Sunday",
+        "b": "Closed"
+      }
+    ],
+    "home_about_paragraphs": [
+      "Based on the corner of Bathurst and Denison Streets in Condobolin, Teqco supplies steel, tools, hardware and much more to farmers, tradies and locals across the district.",
+      "Formerly CS Steel, Teqco continues to provide a broad range of products and practical services for jobs on the farm, at work and around the home. Pop in, tell us what you're working on and we'll do our best to point you in the right direction."
+    ],
+    "about_story_paragraphs": [
+      "Located on the corner of Bathurst and Denison Streets in Condobolin, Teqco supplies farmers, tradespeople and handymen across the Lachlan Valley with the steel, tools and hardware they need to get the job done.",
+      "Previously CS Steel, Teqco continues to supply a wide range of steel sections, sheet metal, mesh, hand and power tools, fasteners and general hardware. With practical advice and friendly service, we’re here to help you find the right gear for the job, big or small."
+    ]
+  },
+  "ranges": [
+    {
+      "id": 33,
+      "slug": "steel",
+      "title": "Steel, Roofing, Mesh",
+      "order": 1,
+      "subtitle": "Steeline, Lysaght, Arc Metalcentre, Steel Supplies",
+      "description": "A good range of steel sections, sheet, mesh and roofing supplies for farm, building and workshop jobs. From RHS and SHS to pipe, angle, flat bar, rod and channel, we stock a variety of common sizes, with cutting to length available on selected products. We also offer sheet metal guillotining and folding up to 3mm thick.",
+      "brands": [
+        "Steeline",
+        "Lysaght",
+        "Arc Metalcentre",
+        "Steel Supplies"
+      ],
+      "image": {
+        "id": 9,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/steel.jpg",
+        "width": 860,
+        "height": 538,
+        "alt": "Stacked steel sheet",
+        "file": "steel.jpg",
+        "modified": "2026-10-23T17:58:40+00:00"
+      },
+      "modified": "2026-10-23T18:00:27+00:00"
+    },
+    {
+      "id": 34,
+      "slug": "welding",
+      "title": "Welding Equipment & Power Tools",
+      "order": 2,
+      "subtitle": "Weldclass, HiKoki, Metabo",
+      "description": "From welders, wire and rods to grinders, drills, saws and cordless tools, we carry equipment and consumables for the workshop and job site. We also stock welding accessories and protective gear to help you get the job done.",
+      "brands": [
+        "Weldclass",
+        "HiKoki",
+        "Metabo"
+      ],
+      "image": {
+        "id": 10,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/welding.jpg",
+        "width": 1400,
+        "height": 1050,
+        "alt": "Welder at work in a helmet",
+        "file": "welding.jpg",
+        "modified": "2026-10-23T17:58:40+00:00"
+      },
+      "modified": "2026-10-23T18:00:27+00:00"
+    },
+    {
+      "id": 35,
+      "slug": "trailers",
+      "title": "A-teq Trailers",
+      "order": 3,
+      "subtitle": "Built locally. See the A-teq range",
+      "description": "Looking for a trailer for work or around the property? Ask us about A-teq box, cage and tandem trailers, including custom options, along with trailer parts and accessories.",
+      "brands": [
+        "A-teq"
+      ],
+      "image": {
+        "id": 11,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/trailer-client.jpg",
+        "width": 1400,
+        "height": 1397,
+        "alt": "A-teq galvanised tandem cage trailer",
+        "file": "trailer-client.jpg",
+        "modified": "2026-10-23T17:58:41+00:00"
+      },
+      "modified": "2026-10-23T18:00:27+00:00"
+    },
+    {
+      "id": 36,
+      "slug": "gas",
+      "title": "Industrial & Domestic Gas",
+      "order": 4,
+      "subtitle": "Speed Gas, Origin",
+      "description": "Teqco is a local agent for Origin Energy LPG and Speedgas, offering gas bottle exchange for homes, farms, businesses and workshops. Whether you need LPG for the property or welding gases for the job, contact the team to find out about available cylinders and exchange options.",
+      "brands": [
+        "Speed Gas",
+        "Origin"
+      ],
+      "image": {
+        "id": 12,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/gas.jpg",
+        "width": 876,
+        "height": 1400,
+        "alt": "Red LPG gas cylinder",
+        "file": "gas.jpg",
+        "modified": "2026-10-23T17:58:42+00:00"
+      },
+      "modified": "2026-10-23T18:00:27+00:00"
+    },
+    {
+      "id": 37,
+      "slug": "abrasives",
+      "title": "Abrasives & Fasteners",
+      "order": 5,
+      "subtitle": "Addler, AllFasteners, Specfast",
+      "description": "From cutting and grinding discs to bolts, nuts, washers, tek screws, anchors and rivets, we stock a practical range of workshop and building essentials in a variety of sizes.",
+      "brands": [
+        "Addler",
+        "AllFasteners",
+        "Specfast"
+      ],
+      "image": {
+        "id": 13,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/fasteners.jpg",
+        "width": 1400,
+        "height": 788,
+        "alt": "Driver bits and fasteners",
+        "file": "fasteners.jpg",
+        "modified": "2026-10-23T17:58:42+00:00"
+      },
+      "modified": "2026-10-23T18:00:27+00:00"
+    },
+    {
+      "id": 38,
+      "slug": "augers",
+      "title": "Grainline Augers",
+      "order": 6,
+      "subtitle": "Grain handling for harvest",
+      "description": "Grain augers and spare parts for harvest, including flighting, gearboxes, belts and drive components. Talk to us early in the season so the parts are on the shelf when you need them.",
+      "brands": [
+        "Grainline"
+      ],
+      "image": {
+        "id": 14,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/auger-client.jpg",
+        "width": 1400,
+        "height": 1019,
+        "alt": "Grainline grain auger",
+        "file": "auger-client.jpg",
+        "modified": "2026-10-23T17:58:43+00:00"
+      },
+      "modified": "2026-10-23T18:00:27+00:00"
+    },
+    {
+      "id": 39,
+      "slug": "compressors",
+      "title": "Peerless Air Compressors",
+      "order": 7,
+      "subtitle": "Workshop and portable units",
+      "description": "Workshop and portable air compressors, from small direct-drive units to belt-drive workshop models, with hoses, fittings, couplers and air tools to suit.",
+      "brands": [
+        "Peerless"
+      ],
+      "image": {
+        "id": 15,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/compressor-client.jpg",
+        "width": 533,
+        "height": 477,
+        "alt": "Peerless petrol air compressor",
+        "file": "compressor-client.jpg",
+        "modified": "2026-10-23T17:58:43+00:00"
+      },
+      "modified": "2026-10-23T18:00:27+00:00"
+    },
+    {
+      "id": 40,
+      "slug": "oils",
+      "title": "Atlantic Oils & Lubricants",
+      "order": 8,
+      "subtitle": "Engine, hydraulic and gear oils",
+      "description": "Engine, hydraulic, gear and transmission oils in packs and drums, plus greases, grease guns, coolants and workshop fluids for trucks, tractors and machinery.",
+      "brands": [
+        "Atlantic Oil"
+      ],
+      "image": {
+        "id": 16,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/oils.jpg",
+        "width": 1024,
+        "height": 685,
+        "alt": "Grease gun on a timber bench",
+        "file": "oils.jpg",
+        "modified": "2026-10-23T17:58:43+00:00"
+      },
+      "modified": "2026-10-23T18:00:27+00:00"
+    },
+    {
+      "id": 41,
+      "slug": "sheds",
+      "title": "Sheds",
+      "order": 9,
+      "subtitle": "Shedtech",
+      "description": "Shedtech kit sheds for the farm, the workshop and the home: machinery sheds, garages, carports and hay sheds. We help you size and quote the shed, then supply the kit and the fixings to put it up.",
+      "brands": [
+        "Shedtech"
+      ],
+      "image": {
+        "id": 17,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/sheds-client.jpg",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Shedtech machinery and hay sheds on a farm at sunset",
+        "file": "sheds-client.jpg",
+        "modified": "2026-10-23T17:58:44+00:00"
+      },
+      "modified": "2026-10-23T18:00:27+00:00"
+    },
+    {
+      "id": 42,
+      "slug": "tanks",
+      "title": "Polymaster Tanks",
+      "order": 10,
+      "subtitle": "Rainwater and stock tanks",
+      "description": "Rainwater tanks, stock water tanks, troughs and chemical tanks in poly, with outlets, fittings, float valves and pump connections.",
+      "brands": [
+        "Polymaster"
+      ],
+      "image": {
+        "id": 18,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/tank-client.jpg",
+        "width": 1400,
+        "height": 753,
+        "alt": "Polymaster poly tanks",
+        "file": "tank-client.jpg",
+        "modified": "2026-10-23T17:58:44+00:00"
+      },
+      "modified": "2026-10-23T18:00:27+00:00"
+    },
+    {
+      "id": 43,
+      "slug": "edging",
+      "title": "Garden Edging",
+      "order": 11,
+      "subtitle": "Teqedge",
+      "description": "Teqedge steel garden edging in a range of profiles, heights and finishes for paths, lawns and garden beds. Straight lengths, curves and corner pieces, with pins and joiners.",
+      "brands": [
+        "Teqedge"
+      ],
+      "image": {
+        "id": 19,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/edging-client.jpg",
+        "width": 972,
+        "height": 1400,
+        "alt": "Teqedge steel garden edging",
+        "file": "edging-client.jpg",
+        "modified": "2026-10-23T17:58:45+00:00"
+      },
+      "modified": "2026-10-23T18:00:27+00:00"
+    },
+    {
+      "id": 44,
+      "slug": "hand-tools",
+      "title": "Hand Tools",
+      "order": 12,
+      "subtitle": "KC Tools, Sheffield Group",
+      "description": "Spanners, sockets, pliers, hammers, measuring tools, tool chests and rolls from KC Tools and the Sheffield Group. Trade-quality gear that lasts.",
+      "brands": [
+        "KC Tools",
+        "Sheffield Group"
+      ],
+      "image": {
+        "id": 20,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/tools.jpg",
+        "width": 860,
+        "height": 538,
+        "alt": "Hand tools on the Teqco store wall",
+        "file": "tools.jpg",
+        "modified": "2026-10-23T17:58:45+00:00"
+      },
+      "modified": "2026-10-23T18:00:27+00:00"
+    },
+    {
+      "id": 45,
+      "slug": "safety",
+      "title": "Work Safety & Boots",
+      "order": 13,
+      "subtitle": "Maxisafe, Beaver",
+      "description": "Steel cap and composite toe boots, gloves, hi-vis workwear, eye, ear and respiratory protection, sunscreen and first aid.",
+      "brands": [
+        "Maxisafe",
+        "Beaver"
+      ],
+      "image": {
+        "id": 21,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/boots.jpg",
+        "width": 787,
+        "height": 1400,
+        "alt": "Steel cap work boot",
+        "file": "boots.jpg",
+        "modified": "2026-10-23T17:58:45+00:00"
+      },
+      "modified": "2026-10-23T18:00:28+00:00"
+    },
+    {
+      "id": 46,
+      "slug": "automotive",
+      "title": "Truck & Automotive Supplies",
+      "order": 14,
+      "subtitle": "Parts, batteries, accessories",
+      "description": "Lights, tie-downs, ratchet straps, tow balls, mudflaps and accessories for trucks, utes and farm vehicles.",
+      "brands": [],
+      "image": {
+        "id": 22,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/truck.jpg",
+        "width": 1400,
+        "height": 787,
+        "alt": "Road train on an outback highway",
+        "file": "truck.jpg",
+        "modified": "2026-10-23T17:58:46+00:00"
+      },
+      "modified": "2026-10-23T18:00:28+00:00"
+    },
+    {
+      "id": 47,
+      "slug": "general",
+      "title": "General Merchandise",
+      "order": 15,
+      "subtitle": "Gate fittings, trailer parts, paint, pumps, chain, matting, castors",
+      "description": "Gate fittings from Rotech, trailer parts from Ark, industrial paint, Reefe pumps, chain and cable, rubber matting, wheels and castors from Allied Industrial, Ultragrime wipes and the everyday hardware that keeps a property running.",
+      "brands": [
+        "Rotech",
+        "Ark",
+        "Reefe",
+        "Allied Industrial",
+        "Ultragrime"
+      ],
+      "image": {
+        "id": 23,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/castors.jpg",
+        "width": 1058,
+        "height": 1400,
+        "alt": "Swivel castor wheel",
+        "file": "castors.jpg",
+        "modified": "2026-10-23T17:58:46+00:00"
+      },
+      "modified": "2026-10-23T18:00:28+00:00"
+    }
+  ],
+  "brands": [
+    {
+      "id": 48,
+      "slug": "alpha-tools",
+      "title": "Alpha Tools",
+      "order": 1,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 26,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-alpha.png",
+        "width": 1100,
+        "height": 600,
+        "alt": "Alpha Tools",
+        "file": "brand-alpha.png",
+        "modified": "2026-10-23T17:58:48+00:00"
+      }
+    },
+    {
+      "id": 49,
+      "slug": "hikoki",
+      "title": "HiKoki",
+      "order": 2,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 28,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-hikoki.jpg",
+        "width": 1150,
+        "height": 360,
+        "alt": "HiKoki",
+        "file": "brand-hikoki.jpg",
+        "modified": "2026-10-23T17:58:48+00:00"
+      }
+    },
+    {
+      "id": 50,
+      "slug": "kc-tools",
+      "title": "KC Tools",
+      "order": 3,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 29,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-kctools.png",
+        "width": 1750,
+        "height": 500,
+        "alt": "KC Tools",
+        "file": "brand-kctools.png",
+        "modified": "2026-10-23T17:58:48+00:00"
+      }
+    },
+    {
+      "id": 51,
+      "slug": "grainline",
+      "title": "Grainline",
+      "order": 4,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 27,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-grainline.png",
+        "width": 400,
+        "height": 101,
+        "alt": "Grainline",
+        "file": "brand-grainline.png",
+        "modified": "2026-10-23T17:58:48+00:00"
+      }
+    },
+    {
+      "id": 52,
+      "slug": "peerless",
+      "title": "Peerless",
+      "order": 5,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 32,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-peerless.png",
+        "width": 400,
+        "height": 117,
+        "alt": "Peerless",
+        "file": "brand-peerless.png",
+        "modified": "2026-10-23T17:58:49+00:00"
+      }
+    },
+    {
+      "id": 53,
+      "slug": "macnaught",
+      "title": "Macnaught",
+      "order": 6,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 30,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-macnaught.png",
+        "width": 400,
+        "height": 247,
+        "alt": "Macnaught",
+        "file": "brand-macnaught.png",
+        "modified": "2026-10-23T17:58:49+00:00"
+      }
+    },
+    {
+      "id": 54,
+      "slug": "maxisafe",
+      "title": "Maxisafe",
+      "order": 7,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 31,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-maxisafe.png",
+        "width": 250,
+        "height": 65,
+        "alt": "Maxisafe",
+        "file": "brand-maxisafe.png",
+        "modified": "2026-10-23T17:58:49+00:00"
+      }
+    }
+  ],
+  "slides": [
+    {
+      "id": 55,
+      "heading": "Your local rural, trade and hardware supplier",
+      "order": 1,
+      "text": "Teqco stocks a comprehensive range of steel sections, sheet and mesh, hand and power tools, fasteners and hardware, right here in Condobolin. Fast, friendly service from people who know the land.",
+      "button": {
+        "label": "Browse Our Range",
+        "link": "/products/"
+      },
+      "button2": {
+        "label": "Get a Quote",
+        "link": "/contact/#enquiry"
+      },
+      "image": {
+        "id": 24,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/hero-welding.jpg",
+        "width": 1400,
+        "height": 933,
+        "alt": "Welder working with a MIG torch in a shower of sparks",
+        "file": "hero-welding.jpg",
+        "modified": "2026-10-23T17:58:47+00:00"
+      }
+    },
+    {
+      "id": 56,
+      "heading": "Steel for the jobs that matter",
+      "order": 2,
+      "text": "From RHS and SHS to sheet, mesh and roofing, we supply a wide range of steel products, with cutting to length and sheet metal folding up to 3mm.",
+      "button": {
+        "label": "Browse Our Range",
+        "link": "/products/"
+      },
+      "button2": {
+        "label": "Get a Quote",
+        "link": "/contact/#enquiry"
+      },
+      "image": {
+        "id": 9,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/steel.jpg",
+        "width": 860,
+        "height": 538,
+        "alt": "Stacked steel sheet",
+        "file": "steel.jpg",
+        "modified": "2026-10-23T17:58:40+00:00"
+      }
+    },
+    {
+      "id": 57,
+      "heading": "Good gear for work and around the property.",
+      "order": 3,
+      "text": "From HiKoki, Alpha Tools, KC Tools and Bossweld to fasteners, welding supplies, gas and farm essentials, Teqco has a wide range for rural, trade and home projects. Tell us what you're working on and we'll help you find what you need.",
+      "button": {
+        "label": "Browse Our Range",
+        "link": "/products/"
+      },
+      "button2": {
+        "label": "Get a Quote",
+        "link": "/contact/#enquiry"
+      },
+      "image": {
+        "id": 20,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/tools.jpg",
+        "width": 860,
+        "height": 538,
+        "alt": "Hand tools on the Teqco store wall",
+        "file": "tools.jpg",
+        "modified": "2026-10-23T17:58:45+00:00"
+      }
+    }
+  ],
+  "catalogues": [
+    {
+      "id": 58,
+      "title": "KC Tools Catalogue",
+      "order": 1,
+      "url": "https://www.kctools.com.au/catalogues"
+    },
+    {
+      "id": 59,
+      "title": "HiKoki Power Tools Catalogue",
+      "order": 2,
+      "url": "https://hikokipowertools.com.au/media/3136/hik38566-21-v2-hikoki-product-catalogue-web.pdf"
+    },
+    {
+      "id": 60,
+      "title": "Weldclass Catalogue",
+      "order": 3,
+      "url": "https://jwlmarketingnsw.sharepoint.com/sites/companyshares/Marketing_General/Forms/AllItems.aspx?id=%2Fsites%2Fcompanyshares%2FMarketing%5FGeneral%2FCatalogues%2FWeldclass%20Catalogue%5FEd%2006%5F2020%2FWorking%20Files%2FWeldclass%5FCATALOGUE%5F2022%5FWeb%20Download%2Epdf&parent=%2Fsites%2Fcompanyshares%2FMarketing%5FGeneral%2FCatalogues%2FWeldclass%20Catalogue%5FEd%2006%5F2020%2FWorking%20Files&p=true&ga=1"
+    },
+    {
+      "id": 61,
+      "title": "Alpha Catalogue",
+      "order": 4,
+      "url": "http://cdn.sheffieldblades.com.au/ecatalogue/AlphaCatalogueEd19/8/"
+    }
+  ]
+}
