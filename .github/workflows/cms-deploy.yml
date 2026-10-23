@@ -1,9 +1,11 @@
 # Rebuilds and redeploys the site whenever content changes in the Teqco CMS.
 # Triggered by WordPress (repository_dispatch "cms-update"), or by hand from the Actions tab.
 #
-# Repository secrets used:
-#   CLOUDWAYS_EMAIL, CLOUDWAYS_API_KEY  Cloudways login email and API key (Account > API)
-#   VERCEL_TOKEN                        optional; when set, the Vercel mirror is redeployed too
+# Cloudways is updated one of two ways, depending on which secrets exist:
+#   A) CLOUDWAYS_EMAIL + CLOUDWAYS_API_KEY   API: pull the cloudways branch, then clear the app cache
+#   B) CLOUDWAYS_SFTP_HOST + CLOUDWAYS_SFTP_USER + CLOUDWAYS_SFTP_PASSWORD
+#      SFTP: mirror the built site straight into public_html (an Application Credential on the app)
+# VERCEL_TOKEN is optional; when set, the Vercel mirror is redeployed too.
 name: Rebuild from CMS
 
 on:
@@ -39,6 +41,11 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Which deploy secrets are set
+        run: |
+          echo "HAS_CW_API=${{ secrets.CLOUDWAYS_API_KEY != '' && secrets.CLOUDWAYS_EMAIL != '' }}" >> "$GITHUB_ENV"
+          echo "HAS_CW_SFTP=${{ secrets.CLOUDWAYS_SFTP_PASSWORD != '' && secrets.CLOUDWAYS_SFTP_USER != '' && secrets.CLOUDWAYS_SFTP_HOST != '' }}" >> "$GITHUB_ENV"
+
       - name: Install
         run: npm ci
 
@@ -72,6 +79,7 @@ jobs:
         env:
           CW_EMAIL: ${{ secrets.CLOUDWAYS_EMAIL }}
           CW_KEY: ${{ secrets.CLOUDWAYS_API_KEY }}
+        if: ${{ env.HAS_CW_API == 'true' }}
         run: |
           set -euo pipefail
           API=https://api.cloudways.com/api/v1
@@ -90,6 +98,22 @@ jobs:
           echo "Git pull operation $OP"; wait_op "$OP"
           OP=$(curl -sf -X POST -H "$AUTH" "$API/app/cache/purge" -d server_id=$CLOUDWAYS_SERVER_ID -d app_id=$CLOUDWAYS_APP_ID | jq -r .operation_id)
           echo "Cache purge operation $OP"; [ "$OP" = null ] || wait_op "$OP"
+
+      - name: Upload to Cloudways over SFTP
+        if: ${{ env.HAS_CW_API != 'true' && env.HAS_CW_SFTP == 'true' }}
+        env:
+          SFTP_HOST: ${{ secrets.CLOUDWAYS_SFTP_HOST }}
+          SFTP_USER: ${{ secrets.CLOUDWAYS_SFTP_USER }}
+          SFTP_PASS: ${{ secrets.CLOUDWAYS_SFTP_PASSWORD }}
+        run: |
+          set -euo pipefail
+          sudo apt-get install -y -qq lftp >/dev/null
+          cp cloudways-htaccess out/.htaccess
+          lftp -u "$SFTP_USER","$SFTP_PASS" "sftp://$SFTP_HOST" -e "set sftp:auto-confirm yes; set net:max-retries 3; mirror --reverse --delete --verbose=1 --parallel=4 --exclude-glob .git* out/ public_html/; bye"
+
+      - name: Cloudways not configured
+        if: ${{ env.HAS_CW_API != 'true' && env.HAS_CW_SFTP != 'true' }}
+        run: echo "::warning::No Cloudways secrets set; only the cloudways branch was updated."
 
       - name: Redeploy the Vercel mirror
         env:
