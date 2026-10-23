@@ -24,11 +24,15 @@ export default function Footer() {
               <li><Link href="/contact/">Contact Us</Link></li>
             </ul>
           </div>
-          <div>
+          <div className="ranges">
             <h2>Ranges</h2>
-            <ul>
-              {rangesAZ.map((r) => <li key={r.slug}><Link href={`/products/#${r.slug}`}>{r.title}</Link></li>)}
-            </ul>
+            <div className="cols">
+              {[rangesAZ.slice(0, 8), rangesAZ.slice(8)].map((col, i) => (
+                <ul key={i}>
+                  {col.map((r) => <li key={r.slug}><Link href={`/products/#${r.slug}`}>{r.title}</Link></li>)}
+                </ul>
+              ))}
+            </div>
           </div>
           <div>
             <h2>Visit</h2>

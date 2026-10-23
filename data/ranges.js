@@ -17,7 +17,7 @@ export const ranges = [
     desc: 'Workshop and portable air compressors, from small direct-drive units to belt-drive workshop models, with hoses, fittings, couplers and air tools to suit.' },
   { slug: 'oils', img: 'oils.jpg', alt: 'Grease gun on a timber bench', title: 'Atlantic Oils & Lubricants', sub: 'Engine, hydraulic and gear oils', brands: ['Atlantic Oil'],
     desc: 'Engine, hydraulic, gear and transmission oils in packs and drums, plus greases, grease guns, coolants and workshop fluids for trucks, tractors and machinery.' },
-  { slug: 'sheds', img: 'sheds.jpg', alt: 'Farm shed and silo at sunset', title: 'Sheds', sub: 'Shedtech', brands: ['Shedtech'],
+  { slug: 'sheds', img: 'sheds-client.jpg', alt: 'Shedtech machinery and hay sheds on a farm at sunset', title: 'Sheds', sub: 'Shedtech', brands: ['Shedtech'],
     desc: 'Shedtech kit sheds for the farm, the workshop and the home: machinery sheds, garages, carports and hay sheds. We help you size and quote the shed, then supply the kit and the fixings to put it up.' },
   { slug: 'tanks', img: 'tank-client.jpg', alt: 'Polymaster poly tanks', title: 'Polymaster Tanks', sub: 'Rainwater and stock tanks', brands: ['Polymaster'],
     desc: 'Rainwater tanks, stock water tanks, troughs and chemical tanks in poly, with outlets, fittings, float valves and pump connections.' },
