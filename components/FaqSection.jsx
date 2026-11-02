@@ -13,7 +13,7 @@ export default function FaqSection({ tight = false }) {
     <div className="fgrid2">
       <details open><summary>What are your trading hours?</summary><p>We are open Monday to Friday from 7am to 5pm. We are closed on weekends and public holidays.</p></details>
       <details><summary>What payment options do you accept?</summary><p>All major credit cards and cash. Trade accounts are available on request for regular customers.</p></details>
-      <details><summary>Where are you located?</summary><p>22 Bathurst Street, Condobolin NSW 2877, on the corner of Bathurst and Denison Streets.</p></details>
+      <details><summary>Where are you located?</summary><p>14-22 Bathurst Street, Condobolin NSW 2877, on the corner of Bathurst and Denison Streets.</p></details>
       <details><summary>Is Teqco the same business as CS Steel?</summary><p>Yes. Teqco has taken over CS Steel and continues to offer the same products and services from the same location.</p></details>
     </div>
   </div>

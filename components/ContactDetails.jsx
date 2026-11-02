@@ -15,7 +15,7 @@ export default function ContactDetails() {
       </div>
       <div>
         <dt><PinIcon /> Find Us</dt>
-        <dd><a href={store.mapsUrl} target="_blank" rel="noopener">{store.address}<br />{store.corner}</a></dd>
+        <dd><a href={store.mapsUrl} target="_blank" rel="noopener">{store.address}{store.corner && <><br />{store.corner}</>}</a></dd>
       </div>
       <div>
         <dt><ClockIcon /> Opening Hours</dt>

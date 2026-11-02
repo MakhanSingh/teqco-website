@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     ...ogBase,
     title: 'Teqco | Steel, Tools & Hardware Store in Condobolin NSW',
-    description: 'Steel, tools and hardware for farm, trade and home. 22 Bathurst Street, Condobolin. Open Monday to Friday from 7am.',
+    description: 'Steel, tools and hardware for farm, trade and home. 14-22 Bathurst Street, Condobolin. Open Monday to Friday from 7am.',
     url: '/',
   },
 };

@@ -17,7 +17,7 @@ const business = {
   email: store.email,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '22 Bathurst Street',
+    streetAddress: '14-22 Bathurst Street',
     addressLocality: 'Condobolin',
     addressRegion: 'NSW',
     postalCode: '2877',

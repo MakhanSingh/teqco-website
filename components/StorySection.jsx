@@ -10,12 +10,14 @@ export default function StorySection() {
           <span className="eyebrow">{s.about_story_eyebrow}</span>
           <h2><Em text={s.about_story_heading} /></h2>
           {s.about_story_paragraphs.map((p, i) => <p key={i}>{p}</p>)}
-          <div className="stats">
-            {s.about_stats.map((st, i) => <div key={i}><b>{st.a}</b><span>{st.b}</span></div>)}
-          </div>
+          {s.about_stats.length > 0 && (
+            <div className="stats">
+              {s.about_stats.map((st, i) => <div key={i}><b>{st.a}</b><span>{st.b}</span></div>)}
+            </div>
+          )}
         </div>
         <figure>
-          <Pic src="tools.jpg" alt="Hand tools on the Teqco store wall" sizes="(max-width:980px) 100vw, 560px" />
+          <Pic src="alpha-display-client.jpg" alt="Alpha drill bit display in store" sizes="(max-width:980px) 100vw, 560px" />
           <span className="chip">{store.addressShort.replace(/ NSW.*$/, '')}</span>
         </figure>
       </div>

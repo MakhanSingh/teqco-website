@@ -10,7 +10,7 @@ export default function AboutSection() {
     <section className="sec about" id="about">
       <div className="wrap">
         <figure>
-          <Pic src="about-tools.jpg" alt="Racks of hand tools in the Teqco workshop" sizes="(max-width:980px) 100vw, 560px" />
+          <Pic src="alpha-display-client.jpg" alt="Alpha drill bit display in store" sizes="(max-width:980px) 100vw, 560px" />
           <span className="chip">{store.addressShort.replace(/ NSW.*$/, '')}</span>
         </figure>
         <div>

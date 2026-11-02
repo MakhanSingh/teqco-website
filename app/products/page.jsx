@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     ...ogBase,
     title: 'Products | Steel, welding, tools, trailers and more at Teqco',
-    description: 'Fifteen ranges for the farm, the workshop and jobs around the home, in store at 22 Bathurst Street, Condobolin.',
+    description: 'Fifteen ranges for the farm, the workshop and jobs around the home, in store at 14-22 Bathurst Street, Condobolin.',
     url: '/products/',
   },
 };

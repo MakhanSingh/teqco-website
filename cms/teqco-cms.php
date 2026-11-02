@@ -155,7 +155,7 @@ add_action('acf/init', function () {
       $ta('slide_text', 'text', 'Text', 'One or two sentences under the heading.', 3),
       $f('slide_btn1_label', 'button_label', 'Button label', 'text', ['default_value' => 'Browse Our Range']),
       $f('slide_btn1_link', 'button_link', 'Button link', 'text', ['default_value' => '/products/']),
-      $f('slide_btn2_label', 'button2_label', 'Second button label', 'text', ['default_value' => 'Get a Quote']),
+      $f('slide_btn2_label', 'button2_label', 'Second button label', 'text', ['default_value' => 'Enquire Now']),
       $f('slide_btn2_link', 'button2_link', 'Second button link', 'text', ['default_value' => '/contact/#enquiry']),
     ],
   ]);

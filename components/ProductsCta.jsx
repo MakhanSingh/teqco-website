@@ -4,7 +4,7 @@ import { ClockIcon, PinIcon, MailIcon } from './Icons';
 
 export default function ProductsCta() {
   return (
-    <section className="ctaband" aria-label="Get a quote">
+    <section className="ctaband" aria-label="Enquire now">
       <div className="wrap">
         <div>
           <span className="eyebrow" style={{ color: 'rgba(255,255,255,.7)' }}>Something else?</span>

@@ -34,7 +34,7 @@ export function RangesList() {
                 <div className="chips">{r.brands.map((b) => <span key={b}>{b}</span>)}</div>
               )}
               <div className="acts">
-                <Link className="btn btn-green" href="/contact/#enquiry">Get a quote</Link>
+                <Link className="btn btn-green" href="/contact/#enquiry">Enquire Now</Link>
                 <a className="btn btn-line" href={store.tel}>Call {store.phone}</a>
               </div>
             </div>
