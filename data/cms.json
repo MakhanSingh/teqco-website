@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-23T18:12:39+00:00",
+  "generated": "2026-11-02T17:10:27+00:00",
   "settings": {
     "phone": "02 6895 4180",
     "phone_tel": "+61268954180",
@@ -8,7 +8,7 @@
     "address_short": "14-22 Bathurst St, Condobolin NSW 2877",
     "corner": "",
     "hours_summary": "Mon to Fri, 7am to 5pm",
-    "hours": "Monday to Friday | 7:00am – 5:00pm\nSaturday | Closed\nSunday | Closed",
+    "hours": "Monday to Friday | 7:00am – 5:00pm\r\nSaturday | Closed\r\nSunday | Closed",
     "maps_url": "https://www.google.com/maps/search/14-22+Bathurst+Street+Condobolin+NSW+2877",
     "facebook": "https://www.facebook.com/teqco/",
     "linkedin": "https://www.linkedin.com/company/teqco/",
@@ -35,7 +35,7 @@
     ],
     "home_about_eyebrow": "About Teqco",
     "home_about_heading": "Local knowledge. *A good stock.* Friendly service.",
-    "home_about_text": "Based on the corner of Bathurst and Denison Streets in Condobolin, Teqco supplies steel, tools, hardware and much more to farmers, tradies and locals across the district.\n\nFormerly CS Steel, Teqco continues to provide a broad range of products and practical services for jobs on the farm, at work and around the home. Pop in, tell us what you're working on and we'll do our best to point you in the right direction.",
+    "home_about_text": "Teqco supplies steel, tools, hardware and much more to farmers, tradies and locals across the district.\r\n\r\nFormerly CS Steel, Teqco continues to provide a broad range of products and practical services for jobs on the farm, at work and around the home. Pop in, tell us what you're working on and we'll do our best to point you in the right direction.",
     "home_about_points": [
       {
         "a": "A wide stock under one roof",
@@ -58,7 +58,7 @@
     "about_hero_text": "Your local stop for steel, tools, hardware and rural supplies in Condobolin. Whether you’re working on the farm, on the tools or tackling a job at home, we’re here to help you find what you need.",
     "about_story_eyebrow": "Our story",
     "about_story_heading": "A local name for the *jobs that matter*",
-    "about_story_text": "Located on the corner of Bathurst and Denison Streets in Condobolin, Teqco supplies farmers, tradespeople and handymen across the Lachlan Valley with the steel, tools and hardware they need to get the job done.\n\nPreviously CS Steel, Teqco continues to supply a wide range of steel sections, sheet metal, mesh, hand and power tools, fasteners and general hardware. With practical advice and friendly service, we’re here to help you find the right gear for the job, big or small.",
+    "about_story_text": "Teqco supplies farmers, tradespeople and handymen across Condobolin and surrounding district with the steel, tools and hardware they need to get the job done.\r\n\r\nPreviously CS Steel, Teqco continues to supply a wide range of steel sections, sheet metal, mesh, hand and power tools, fasteners and general hardware. With practical advice and friendly service, we’re here to help you find the right gear for the job, big or small.",
     "about_stats": [],
     "about_services_eyebrow": "What we do",
     "about_services_heading": "More than *just supplies*",
@@ -78,7 +78,7 @@
     ],
     "about_services_button": "Explore Our Product Range",
     "about_cta_heading": "Drop in and see us",
-    "about_cta_text": "You’ll find us on the corner of Bathurst and Denison Streets in Condobolin. Pop in, have a chat with the team and pick up what you need for the next job.\n\nCan't make it in? Give us a call or send through an enquiry and we'll be happy to help.",
+    "about_cta_text": "You’ll find us on the corner of Bathurst and Denison Streets in Condobolin. Pop in, have a chat with the team and pick up what you need for the next job.\r\n\r\nCan't make it in? Give us a call or send through an enquiry and we'll be happy to help.",
     "products_hero_title": "A whole lot for the job at hand",
     "products_hero_text": "From a box of tek screws to a trailer load of RHS, you'll find a good range of supplies for the farm, the workshop and jobs around the home. Browse our ranges below, or give us a call if you're after something in particular.",
     "products_jump_label": "Browse Our Product Ranges",
@@ -201,15 +201,15 @@
         "Origin"
       ],
       "image": {
-        "id": 12,
-        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/gas.jpg",
-        "width": 876,
-        "height": 1400,
+        "id": 76,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/gas-origin-client.jpg",
+        "width": 619,
+        "height": 504,
         "alt": "Origin LPG gas cylinders",
         "file": "gas-origin-client.jpg",
-        "modified": "2026-10-23T17:58:42+00:00"
+        "modified": "2026-11-02T17:07:39+00:00"
       },
-      "modified": "2026-10-23T18:00:27+00:00"
+      "modified": "2026-11-02T17:07:39+00:00"
     },
     {
       "id": 37,
@@ -287,15 +287,15 @@
         "Atlantic Oil"
       ],
       "image": {
-        "id": 16,
-        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/oils.jpg",
-        "width": 1024,
-        "height": 685,
+        "id": 77,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/oils-atlantic-client.png",
+        "width": 407,
+        "height": 369,
         "alt": "Atlantic oil drum, pail and bulk container",
         "file": "oils-atlantic-client.png",
-        "modified": "2026-10-23T17:58:43+00:00"
+        "modified": "2026-11-02T17:07:39+00:00"
       },
-      "modified": "2026-10-23T18:00:27+00:00"
+      "modified": "2026-11-02T17:07:39+00:00"
     },
     {
       "id": 41,
@@ -316,7 +316,7 @@
         "file": "sheds-client.jpg",
         "modified": "2026-10-23T17:58:44+00:00"
       },
-      "modified": "2026-10-23T18:00:27+00:00"
+      "modified": "2026-10-23T18:29:43+00:00"
     },
     {
       "id": 42,
@@ -329,15 +329,15 @@
         "Polymaster"
       ],
       "image": {
-        "id": 18,
-        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/tank-client.jpg",
-        "width": 1400,
-        "height": 753,
+        "id": 78,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/tank-paddock-client.png",
+        "width": 686,
+        "height": 450,
         "alt": "Green poly water tank in a paddock",
         "file": "tank-paddock-client.png",
-        "modified": "2026-10-23T17:58:44+00:00"
+        "modified": "2026-11-02T17:07:39+00:00"
       },
-      "modified": "2026-10-23T18:00:27+00:00"
+      "modified": "2026-11-02T17:07:39+00:00"
     },
     {
       "id": 43,
@@ -350,15 +350,15 @@
         "Teqedge"
       ],
       "image": {
-        "id": 19,
-        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/edging-client.jpg",
-        "width": 972,
-        "height": 1400,
+        "id": 75,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/edging-curve-client.png",
+        "width": 619,
+        "height": 385,
         "alt": "Curved steel garden edging along a lawn",
         "file": "edging-curve-client.png",
-        "modified": "2026-10-23T17:58:45+00:00"
+        "modified": "2026-11-02T17:07:39+00:00"
       },
-      "modified": "2026-10-23T18:00:27+00:00"
+      "modified": "2026-11-02T17:07:39+00:00"
     },
     {
       "id": 44,
@@ -394,15 +394,15 @@
         "Beaver"
       ],
       "image": {
-        "id": 21,
-        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/boots.jpg",
-        "width": 787,
-        "height": 1400,
+        "id": 74,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/safety-client.png",
+        "width": 426,
+        "height": 427,
         "alt": "Work boots on a steel stair tread",
         "file": "safety-client.png",
-        "modified": "2026-10-23T17:58:45+00:00"
+        "modified": "2026-11-02T17:07:38+00:00"
       },
-      "modified": "2026-10-23T18:00:28+00:00"
+      "modified": "2026-11-02T17:07:39+00:00"
     },
     {
       "id": 46,
@@ -515,7 +515,7 @@
         "height": 101,
         "alt": "Grainline",
         "file": "brand-grainline.png",
-        "modified": "2026-10-23T17:58:48+00:00"
+        "modified": "2026-10-23T19:20:04+00:00"
       }
     },
     {
