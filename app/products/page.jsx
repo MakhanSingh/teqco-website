@@ -1,7 +1,6 @@
 import PageHero from '@/components/PageHero';
 import { JumpList, RangesList } from '@/components/RangesList';
 import ProductsCta from '@/components/ProductsCta';
-import Catalogues from '@/components/Catalogues';
 import { ogBase } from '@/data/seo';
 import { settings } from '@/lib/cms';
 
@@ -29,7 +28,6 @@ export default function ProductsPage() {
       />
       <JumpList />
       <RangesList />
-      <Catalogues />
       <ProductsCta />
     </>
   );

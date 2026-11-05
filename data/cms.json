@@ -127,7 +127,7 @@
       "title": "Steel, Roofing, Mesh",
       "order": 1,
       "subtitle": "Steeline, Lysaght, Arc Metalcentre, Steel Supplies",
-      "description": "A good range of steel sections, sheet, mesh and roofing supplies for farm, building and workshop jobs. From RHS and SHS to pipe, angle, flat bar, rod and channel, we stock a variety of common sizes, with cutting to length available on selected products. We also offer sheet metal guillotining and folding up to 3mm thick.",
+      "description": "Teqco is your local supplier for steel, roofing and reinforcing products, stocking a large range of RHS, pipe, flat bar, angle and rod, along with reinforcing mesh and accessories. We supply metal roofing in Zincalume and Colorbond, cut to length, as well as Colorbond and pool fencing. We also stock a wide range of sheet metal, with cutting and folding capabilities up to 3mm.",
       "brands": [
         "Steeline",
         "Lysaght",
@@ -151,7 +151,7 @@
       "title": "Welding Equipment & Power Tools",
       "order": 2,
       "subtitle": "Weldclass, HiKoki, Metabo",
-      "description": "From welders, wire and rods to grinders, drills, saws and cordless tools, we carry equipment and consumables for the workshop and job site. We also stock welding accessories and protective gear to help you get the job done.",
+      "description": "Teqco stocks MIG, stick and TIG welders, plasma cutters, grinders, drills, cut-off saws and cordless tools. We also carry welding rods, wire and a wide range of welding consumables to keep you working.",
       "brands": [
         "Weldclass",
         "HiKoki",
@@ -174,7 +174,7 @@
       "title": "A-teq Trailers",
       "order": 3,
       "subtitle": "Flat-Top Tipping Trailers",
-      "description": "Looking for a trailer for work or around the property? Ask us about A-teq box, cage and tandem trailers, including custom options, along with trailer parts and accessories.",
+      "description": "Teqco is an agent for A-Teq Trailers, built tough for farm, trade and everyday work. Fully galvanised and rated to 3.5 tonnes, the range is available in various sizes, with tipping options also available.",
       "brands": [
         "A-teq"
       ],
@@ -195,7 +195,7 @@
       "title": "Industrial & Domestic Gas",
       "order": 4,
       "subtitle": "Speed Gas, Origin",
-      "description": "Teqco is a local agent for Origin Energy LPG and Speedgas, offering gas bottle exchange for homes, farms, businesses and workshops. Whether you need LPG for the property or welding gases for the job, contact the team to find out about available cylinders and exchange options.",
+      "description": "Teqco is your local agent for Origin Energy LPG and Speedgas, supplying gas bottle exchange for homes, farms, businesses and workshops. From LPG for the property to welding gases for the workshop, we offer a range of cylinder and exchange options with no ongoing cylinder rental charges. Talk to our team to find the right option for your needs.",
       "brands": [
         "Speed Gas",
         "Origin"
@@ -217,7 +217,7 @@
       "title": "Abrasives & Fasteners",
       "order": 5,
       "subtitle": "Addler, AllFasteners, Specfast",
-      "description": "From cutting and grinding discs to bolts, nuts, washers, tek screws, anchors and rivets, we stock a practical range of workshop and building essentials in a variety of sizes.",
+      "description": "Teqco stocks the largest range of fasteners in town, including metric and imperial bolts, threaded rod, masonry anchors, tek screws and more. We also stock quality cutting, grinding and flap discs to help you get the job done.",
       "brands": [
         "Addler",
         "AllFasteners",
@@ -240,7 +240,7 @@
       "title": "Grainline Augers",
       "order": 6,
       "subtitle": "Grain handling for harvest",
-      "description": "Grain augers and spare parts for harvest, including flighting, gearboxes, belts and drive components. Talk to us early in the season so the parts are on the shelf when you need them.",
+      "description": "Teqco stocks grain augers and spare parts for harvest, including flighting, gearboxes, belts and drive components. Talk to us early in the season so we can help make sure the parts you need are on the shelf when harvest arrives.",
       "brands": [
         "Grainline"
       ],
@@ -261,7 +261,7 @@
       "title": "Peerless Air Compressors",
       "order": 7,
       "subtitle": "Workshop and portable units",
-      "description": "Workshop and portable air compressors, from small direct-drive units to belt-drive workshop models, with hoses, fittings, couplers and air tools to suit.",
+      "description": "Teqco stocks a range of workshop and portable air compressors, from compact direct-drive units through to larger belt-drive workshop models. We also stock hoses, fittings, couplers and air tools to keep your compressed air setup working.",
       "brands": [
         "Peerless"
       ],
@@ -282,7 +282,7 @@
       "title": "Atlantic Oils & Lubricants",
       "order": 8,
       "subtitle": "Engine, hydraulic and gear oils",
-      "description": "Engine, hydraulic, gear and transmission oils in packs and drums, plus greases, grease guns, coolants and workshop fluids for trucks, tractors and machinery.",
+      "description": "We stock Atlantic engine, hydraulic, gear and transmission oils in 5L, 20L and 205L sizes, along with grease, coolants and workshop fluids for all makes of machinery. Not sure which product you need? We can match your machine with the correct lubricant in-store.",
       "brands": [
         "Atlantic Oil"
       ],
@@ -303,7 +303,7 @@
       "title": "Sheds",
       "order": 9,
       "subtitle": "Shedtech",
-      "description": "Shedtech kit sheds for the farm, the workshop and the home: machinery sheds, garages, carports and hay sheds. We help you size and quote the shed, then supply the kit and the fixings to put it up.",
+      "description": "Teqco supplies Shedtech kit sheds for the farm, workshop and home, including machinery sheds, garages, carports and hay sheds. We can help you choose the right size and provide a quote, then supply the complete shed kit and fixings ready for construction.",
       "brands": [
         "Shedtech"
       ],
@@ -324,7 +324,7 @@
       "title": "Polymaster Tanks",
       "order": 10,
       "subtitle": "Rainwater and stock tanks",
-      "description": "Rainwater tanks, stock water tanks, troughs and chemical tanks in poly, with outlets, fittings, float valves and pump connections.",
+      "description": "Teqco stocks a range of poly tanks for rainwater, stock water and chemical storage, along with troughs to suit your property needs. We also stock outlets, fittings, float valves and pump connections to help complete your setup.",
       "brands": [
         "Polymaster"
       ],
@@ -345,7 +345,7 @@
       "title": "Garden Edging",
       "order": 11,
       "subtitle": "Teqedge",
-      "description": "Teqedge steel garden edging in a range of profiles, heights and finishes for paths, lawns and garden beds. Straight lengths, curves and corner pieces, with pins and joiners.",
+      "description": "Teqco manufactures Teqedge Garden Edging, a cost-effective steel edging solution available in galvanised and weathering steel. Ideal for clean, straight lines, it can also be easily formed into curves to create a neat, low-maintenance garden edge.",
       "brands": [
         "Teqedge"
       ],
@@ -366,7 +366,7 @@
       "title": "Hand Tools",
       "order": 12,
       "subtitle": "KC Tools, Sheffield Group",
-      "description": "Spanners, sockets, pliers, hammers, measuring tools, tool chests and rolls from KC Tools and the Sheffield Group. Trade-quality gear that lasts.",
+      "description": "Teqco stocks a great range of spanners, sockets, pliers, hammers, measuring tools, tool chests and tool rolls from KC Tools and the Sheffield Group. Trade-quality tools built to last.",
       "brands": [
         "KC Tools",
         "Sheffield Group"
@@ -388,7 +388,7 @@
       "title": "Work Safety & Boots",
       "order": 13,
       "subtitle": "Maxisafe, Beaver",
-      "description": "Steel cap and composite toe boots, gloves, hi-vis workwear, eye, ear and respiratory protection, sunscreen and first aid.",
+      "description": "Teqco stocks a range of work safety gear, including steel cap and composite toe boots, gloves, hi-vis workwear, eye and ear protection, respiratory protection and first aid supplies.",
       "brands": [
         "Maxisafe",
         "Beaver"
@@ -410,7 +410,7 @@
       "title": "Truck & Automotive Supplies",
       "order": 14,
       "subtitle": "Trailer parts, lights, mudflaps, other accessories",
-      "description": "Lights, tie-downs, ratchet straps, tow balls, mudflaps and accessories for trucks, utes and farm vehicles.",
+      "description": "Our truck, trailer and automotive range includes trailer hubs and suspension components, lights, tow balls, ratchet tie-downs, mudflaps, oversize signage and more.",
       "brands": [],
       "image": {
         "id": 22,
@@ -429,7 +429,7 @@
       "title": "General Merchandise",
       "order": 15,
       "subtitle": "Gate fittings, paint, pumps, chain, matting, castors",
-      "description": "Gate fittings from Rotech, trailer parts from Ark, industrial paint, Reefe pumps, chain and cable, rubber matting, wheels and castors from Allied Industrial, Ultragrime wipes and the everyday hardware that keeps a property running.",
+      "description": "Teqco stocks a practical range of everyday hardware to keep your property running, including gate fittings from Rotech, trailer parts from Ark, industrial paint, Reefe pumps, chain and cable, rubber matting, wheels and castors from Allied Industrial, and Ultragrime wipes.",
       "brands": [
         "Rotech",
         "Ark",
