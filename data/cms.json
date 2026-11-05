@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02T17:10:27+00:00",
+  "generated": "2026-11-05T06:10:14+00:00",
   "settings": {
     "phone": "02 6895 4180",
     "phone_tel": "+61268954180",
@@ -135,15 +135,15 @@
         "Steel Supplies"
       ],
       "image": {
-        "id": 9,
-        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/steel.jpg",
-        "width": 860,
-        "height": 538,
-        "alt": "Stacked steel sheet",
-        "file": "steel.jpg",
-        "modified": "2026-10-23T17:58:40+00:00"
+        "id": 79,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/steel-coils-truck.jpg",
+        "width": 1400,
+        "height": 1296,
+        "alt": "Steel coils chained on a flatbed truck",
+        "file": "steel-coils-truck.jpg",
+        "modified": "2026-11-05T06:07:29+00:00"
       },
-      "modified": "2026-10-23T18:00:27+00:00"
+      "modified": "2026-11-05T06:07:29+00:00"
     },
     {
       "id": 34,
@@ -567,6 +567,261 @@
         "alt": "Maxisafe",
         "file": "brand-maxisafe.png",
         "modified": "2026-10-23T17:58:49+00:00"
+      }
+    },
+    {
+      "id": 81,
+      "slug": "beaver",
+      "title": "Beaver",
+      "order": 8,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 80,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-beaver.png",
+        "width": 476,
+        "height": 216,
+        "alt": "Beaver",
+        "file": "brand-beaver.png",
+        "modified": "2026-11-05T06:07:29+00:00"
+      }
+    },
+    {
+      "id": 83,
+      "slug": "reefe",
+      "title": "Reefe",
+      "order": 9,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 82,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-reefe.png",
+        "width": 715,
+        "height": 216,
+        "alt": "Reefe",
+        "file": "brand-reefe.png",
+        "modified": "2026-11-05T06:07:30+00:00"
+      }
+    },
+    {
+      "id": 85,
+      "slug": "ark",
+      "title": "ARK",
+      "order": 10,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 84,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-ark.png",
+        "width": 470,
+        "height": 216,
+        "alt": "ARK",
+        "file": "brand-ark.png",
+        "modified": "2026-11-05T06:07:30+00:00"
+      }
+    },
+    {
+      "id": 87,
+      "slug": "teqedge",
+      "title": "Teqedge",
+      "order": 11,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 86,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-teqedge.png",
+        "width": 367,
+        "height": 200,
+        "alt": "Teqedge",
+        "file": "brand-teqedge.png",
+        "modified": "2026-11-05T06:07:30+00:00"
+      }
+    },
+    {
+      "id": 89,
+      "slug": "polymaster",
+      "title": "Polymaster",
+      "order": 12,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 88,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-polymaster.png",
+        "width": 533,
+        "height": 200,
+        "alt": "Polymaster",
+        "file": "brand-polymaster.png",
+        "modified": "2026-11-05T06:07:30+00:00"
+      }
+    },
+    {
+      "id": 91,
+      "slug": "speed-gas",
+      "title": "Speed Gas",
+      "order": 13,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 90,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-speedgas.png",
+        "width": 700,
+        "height": 216,
+        "alt": "Speed Gas",
+        "file": "brand-speedgas.png",
+        "modified": "2026-11-05T06:07:30+00:00"
+      }
+    },
+    {
+      "id": 93,
+      "slug": "origin",
+      "title": "Origin",
+      "order": 14,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 92,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-origin.png",
+        "width": 161,
+        "height": 200,
+        "alt": "Origin",
+        "file": "brand-origin.png",
+        "modified": "2026-11-05T06:07:30+00:00"
+      }
+    },
+    {
+      "id": 95,
+      "slug": "a-teq-trailers",
+      "title": "A-teq Trailers",
+      "order": 15,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 94,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-ateq.png",
+        "width": 569,
+        "height": 200,
+        "alt": "A-teq Trailers",
+        "file": "brand-ateq.png",
+        "modified": "2026-11-05T06:07:30+00:00"
+      }
+    },
+    {
+      "id": 97,
+      "slug": "weldclass",
+      "title": "Weldclass",
+      "order": 16,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 96,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-weldclass.png",
+        "width": 996,
+        "height": 205,
+        "alt": "Weldclass",
+        "file": "brand-weldclass.png",
+        "modified": "2026-11-05T06:07:30+00:00"
+      }
+    },
+    {
+      "id": 99,
+      "slug": "metabo",
+      "title": "Metabo",
+      "order": 17,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 98,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-metabo.png",
+        "width": 843,
+        "height": 216,
+        "alt": "Metabo",
+        "file": "brand-metabo.png",
+        "modified": "2026-11-05T06:07:30+00:00"
+      }
+    },
+    {
+      "id": 101,
+      "slug": "specfast",
+      "title": "SpecFast",
+      "order": 18,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 100,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-specfast.png",
+        "width": 556,
+        "height": 200,
+        "alt": "SpecFast",
+        "file": "brand-specfast.png",
+        "modified": "2026-11-05T06:07:30+00:00"
+      }
+    },
+    {
+      "id": 103,
+      "slug": "lysaght",
+      "title": "Lysaght",
+      "order": 19,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 102,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-lysaght.png",
+        "width": 723,
+        "height": 200,
+        "alt": "Lysaght",
+        "file": "brand-lysaght.png",
+        "modified": "2026-11-05T06:07:31+00:00"
+      }
+    },
+    {
+      "id": 105,
+      "slug": "addler",
+      "title": "Addler",
+      "order": 20,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 104,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-addler.png",
+        "width": 689,
+        "height": 216,
+        "alt": "Addler",
+        "file": "brand-addler.png",
+        "modified": "2026-11-05T06:07:31+00:00"
+      }
+    },
+    {
+      "id": 107,
+      "slug": "allfasteners",
+      "title": "Allfasteners",
+      "order": 21,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 106,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-allfasteners.png",
+        "width": 801,
+        "height": 216,
+        "alt": "Allfasteners",
+        "file": "brand-allfasteners.png",
+        "modified": "2026-11-05T06:07:31+00:00"
+      }
+    },
+    {
+      "id": 109,
+      "slug": "atlantic-oil",
+      "title": "Atlantic Oil",
+      "order": 22,
+      "website": "",
+      "show": true,
+      "image": {
+        "id": 108,
+        "url": "https://wordpress-667011-6746624.cloudwaysapps.com/wp-content/uploads/teqco/brand-atlantic.png",
+        "width": 200,
+        "height": 200,
+        "alt": "Atlantic Oil",
+        "file": "brand-atlantic.png",
+        "modified": "2026-11-05T06:07:31+00:00"
       }
     }
   ],
